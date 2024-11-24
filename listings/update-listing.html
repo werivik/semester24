@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Update Listing</title>
+    
+    <link rel="stylesheet" href="/css/head/nav.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/body.css">
+    <link rel="stylesheet" href="/css/listings/update-listing.css">
+
+    <script type="module" src="/js/nav/account.js" defer></script>
+    <script type="module" src="/js/listings/update-listing.js" defer></script>
+      
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kay+Pho+Du:wght@400;500;600;700&family=Kumbh+Sans:wght@100..900&family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap" rel="stylesheet">
+
+  </head>
+
+  <script src="https://kit.fontawesome.com/2ef99fbf3a.js" crossorigin="anonymous">
+  </script>
+
+  <body>
+    <header>
+        <nav>
+            <ul>
+                <div class="logo">
+                    <a href="../index.html">
+                        <img src="/media/logos/logo-dark.png" alt="">
+                    </a>
+                </div>
+
+                <div class="responsive-menu">
+                    <input type="checkbox" id="menuToggle" class="menu-toggle">
+                    <label for="menuToggle" class="hamburger-menu">
+                        <div class="hamburger-line"></div>
+                        <div class="hamburger-line"></div>
+                        <div class="hamburger-line"></div>
+                    </label>
+
+                    <div class="links2">
+                        <a href="../index.html">Home</a>
+                        <a href="/listings/all-listings.html">Listings</a>
+                        <a href="">About us</a>
+                        <a href="">Contact us</a>
+                    </div>
+
+                </div>
+
+                <div class="links" id="navLinks">
+                    <a href="../index.html">Home</a>
+                    <div class="nav-dot"></div>
+                    <a href="/listings/all-listings.html">Listings</a>
+                    <div class="nav-dot"></div>
+                    <a href="">About us</a>
+                    <div class="nav-dot"></div>
+                    <a href="">Contact us</a>
+                </div>
+
+                <div class="user-options">
+
+                    <div class="login-options">
+                        <a href="/auth/login.html" class="option-login">Login</a>
+                        <a href="/auth/register.html" class="option-register">REGISTER</a>
+                    </div>
+
+                    <div class="user-profile">
+                        <a href="/profile/profile.html">
+                            <div class="credit-amount">
+                                <p>$ 0 Credits</p>
+                            </div>
+                            <div class="avatar">
+                                <img src="/media/default-profile.jpg" alt="">
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div id="confirm-delete-popup" class="popup hidden">
+            <div class="popup-content">
+              <p id="confirm-delete-message">Are you sure you want to delete this listing?</p>
+              <span>If you confirm yes, the listing will be forever gone</span>
+              <div class="popup-buttons">
+                <button id="confirm-delete-yes" class="confirm-yes">Yes</button>
+                <button id="confirm-delete-no" class="confirm-no">No</button>
+              </div>
+            </div>
+        </div>
+
+        <section class="update-section">
+
+            <h1>Update Listing</h1>
+
+            <form id="update-listing-form" class="update-form">
+
+                <div>
+                    <label for="mediaUrl">Image Link</label>
+                    <input type="url" id="mediaUrl" name="mediaUrl" required placeholder="https://example.com/image.jpg" />
+                </div>
+
+                <div>
+                    <label for="title">Title</label>
+                    <input type="text" id="title" name="title" required placeholder="Listings Title..."/>     
+                </div>
+    
+                <div>
+                    <label for="description">Description</label>
+                    <textarea id="description" name="description" required placeholder="Listings Description..."></textarea>
+                </div>
+    
+                <div>
+                    <label for="tags">Tags (comma-separated)</label>
+                    <input type="text" id="tags" name="tags" placeholder="tag1,tag2,tag3" placeholder="Jakcet, Hat, Blue..."/>
+                </div>
+    
+                <div>
+                    <label for="endsAt">Ends At</label>
+                    <input type="datetime-local" id="endsAt" name="endsAt" required />
+                </div>
+
+                <div class="buttons">
+                    <button type="submit" class="submit-button">Update</button>
+                    <button type="submit" class="delete-button">Delete</button>
+                </div>
+
+            </form>
+
+            <p id="listing-status"></p>
+
+        </section>
+
+        <section class="preview-section">
+
+            <div class="preview-listing">
+
+                <div class="preview-media">
+                    <img src="" alt="">
+                </div>
+
+                <div class="preview-listing-content">
+                    <h3 class="preview-title">title</h3>
+                    <p class="preview-description"></p>
+                    <ol class="preview-tags"></ol>
+                    <p class="preview-ends"></p>
+                </div>
+
+            </div>
+
+        </section>
+    </main>
+    
+    <footer>
+        <div class="questions">
+            <h3>Have Any Questions?</h3>
+            <p>With us you can both buy and sell various products, from cellphones to cars! You must be a registered user to be able to sell and buy, and for first time users you get 1000 Credits to use!</p>
+            <p>Contact Us on this Phone Number or Email address, or fill out a contact form in our Contact Us Page.</p>
+            <div class="questions-contacts">
+                <span><i class="fa-solid fa-phone"></i>1234-567-8910</span>
+                <span><i class="fa-solid fa-envelope"></i>weronika.vik@gmail.com</span>
+            </div>
+        </div>
+        <div class="footer-links">
+            <div class="about">
+                <h4><a href="/error.html" class="footer-links-title">About</a></h4>
+                <a href="/error.html">Our Mission</a>
+                <a href="/error.html">Our Team</a>
+                <a href="/error.html">History</a>
+                <a href="/error.html">Careers</a>
+                <a href="/error.html">FAQs</a>
+            </div>
+            <div class="Services">
+                <h4><a href="/error.html" class="footer-links-title">Services</a></h4>
+                <a href="/error.html">Buy</a>
+                <a href="/error.html">Sell</a>
+                <a href="/error.html">Credit</a>
+                <a href="/error.html">FAQs</a>    
+            </div>
+            <div class="Contact">
+                <h4><a href="/error.html" class="footer-links-title">Contact</a></h4>
+                <a href="/error.html">Phone</a>
+                <a href="/error.html">Email</a>
+                <a href="/error.html">Socials</a>
+            </div>
+        </div>
+    </footer>
+    
+  </body>
+</html>

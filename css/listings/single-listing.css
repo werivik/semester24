@@ -1,0 +1,150 @@
+.margin-section {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding-bottom: 0px;
+    margin-bottom: 200px;
+}
+
+.listing-left-side {
+    width: 42%;
+    height: 75vh;
+
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+
+    .listing-media {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 25px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 25px;
+            padding: 20px;
+            background-color: #29272F;
+        }
+    }
+}
+
+.listing-right-side {
+    width: 27%;
+    height: 100%;
+    margin-left: 80px;
+    display: flex;
+    flex-direction: column;
+
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+
+    .go-back-button {
+
+        a {
+            border-radius: 10px;
+            padding: 5px;
+
+            font-size: 14px;
+            color: #F2F2F2;
+            background-color: #29272F;
+            width: 60px;
+            text-decoration: none;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+
+            i {
+                margin-right: 5px;
+                margin-left: 5px;
+                display: none;
+            }
+
+            &:hover {
+                background-color: #D6650F;
+                color: #F2F2F2;
+                width: 80px;
+                transition: 0.2s;
+
+                i {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .listing-detail {
+
+        h1 {
+            font-size: 35px;
+            margin-bottom: 40px;
+        }
+
+        .listings-tags {
+            margin-bottom: 40px;
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            width: 100%;
+    
+            .tag {
+                height: 30px;
+                width: auto;
+                padding: 5px;
+                padding-left: 7px;
+                padding-right: 7px;
+                border: solid 1.5px #29272F;
+                border-radius: 15px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+    
+                &:hover {
+                    cursor: pointer;
+                    background-color: #D6650F;
+                    color: #F2F2F2;
+                    border-color: #D6650F;
+                    transition: 0.2s;
+                }
+            }
+        }
+
+        .listing-content {
+
+            .description {
+                margin-bottom: 120px;
+            }
+        }
+
+        .listing-creator {
+            margin-top: 80px;
+        }
+
+        .listing-date-info {
+            font-size: 14px;
+            font-style: italic;
+        }
+
+    }
+
+    .place-bid-section {
+        background-color: pink;
+        height: 500px;
+        width: 500px;
+    }
+
+    .hello-there {
+        background-color: pink;
+        height: 500px;
+        width: 500px;
+        position: relative;
+        z-index: 999;
+    }
+}
