@@ -125,6 +125,7 @@ ul {
                 background-color: #D6650F;
                 border-color: #D6650F;
                 transition: 0.2s;
+                background-image: none;
             }
         }
     }

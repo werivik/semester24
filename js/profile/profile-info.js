@@ -207,7 +207,7 @@ document.addEventListener("DOMContentLoaded", () => {
         sessionStorage.clear();
 
         alert('You have been logged out.');
-        window.location.href = 'auth/login.html';
+        window.location.href = '../auth/login.html';
     };
 
     if (logoutButton) {
