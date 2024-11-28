@@ -110,21 +110,20 @@
                     <p class="description"></p>
           
                     <div class="product-meta">
-                        <p class="ends">Ends at:</p>
-                      <p class="total-bids">Total Bids:</p>
+                        <div class="place-bid-content">
+                            <input type="number" id="bidAmount" min="0" step="any" placeholder="Enter your bid amount">
+                            <button class="place-bid" id="placeBid">BID</button>
+                        </div>
+                        <p class="total-bids">Total Bids:</p>
                     </div>
                   </div>
                     
                   <div class="listing-date-info">
-                    <p id="createdListing"></p>
-                    <p id="updatedListing"></p>
+                    <p class="ends">Ends at:</p>
+                    <p id="createdListing" class="created-date"></p>
+                    <p id="updatedListing" class="updated-date"></p>
                   </div>
                 </div>
-            </div>
-
-            <div class="place-bid-content">
-                <input type="number" id="bidAmount" min="0" step="any" placeholder="Enter your bid amount">
-                <button class="place-bid" id="placeBid">Place Bid</button>
             </div>
 
             </section>

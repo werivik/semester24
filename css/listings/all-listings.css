@@ -1,6 +1,7 @@
 main {
     height: 100%;
     min-height: 100vh;
+    width: 100%;
     display: flex;
     flex-direction: column;
 }
@@ -137,12 +138,11 @@ main {
             width: calc(30% - 20px);
             display: flex;
             flex-direction: column;
-            height: 650px;
+            aspect-ratio: 2 / 2.8;
 
             .listing-content {
                 height: 100%;   
-                max-height: 580px; 
-                padding: 10px;
+                padding: 10px 10px 0px 10px;
                 border-radius: 25px 25px 25px 0px;
                 background-color: #29272f;
                 background-image: url(/media/textures/grain-texture2.png);
@@ -156,8 +156,6 @@ main {
                     margin-left: 5px;
                     height: 65%;
                     border-radius: 25px;
-                    padding-bottom: 0px;
-                    margin-bottom: 0px;
                     background-color: #F2F2F2;
                     background-image: url(/media/textures/grain-texture-light.png);
                     background-repeat: repeat;
@@ -173,18 +171,23 @@ main {
                 }
     
                 .listing-details {
-                    height: 45%;
+                    height: 30%;
                     margin-left:10px;
+                    margin-top: 0px;
+                    padding-top: 0px;
+                    overflow: hidden;
+                }
+    
+                .listing-title {
+                    font-size: 1.3vw;
                     margin-top: 0px;
                     padding-top: 0px;
                 }
     
-                .listing-title {
-                    font-size: 20px;
-                }
-    
                 .listing-description {
-                    font-size: 16px;
+                    font-size: 1vw;  
+                    margin-top: 0px;
+                    padding-top: 0px;              
                 }
     
                 .total-bids {
@@ -196,7 +199,7 @@ main {
                     align-items: center;
                     height: 78px;
                     width: 196px;
-                    font-size: 20px;
+                    font-size: 1.2vw;
                 }
             }
     
@@ -322,7 +325,7 @@ main {
 
         .page-number {
             border: solid 1.5px #29272f00;
-            background-color: #EBEEE9;
+            background-color: black;
             border-radius: 5px;
             padding: 5px;
 
@@ -332,5 +335,47 @@ main {
                 transition: 0.2s;
             }
         }
+    }
+}
+
+@media (max-width: 1300px) {
+    .all-listings-section {
+        .all-listings {
+            .listing {
+                width: calc(50% - 20px);
+                .listing-content {
+                    .listing-title {
+                        font-size: 2vw;
+                    }
+                    .total-bids {
+                        font-size: 2vw;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+@media (max-width: 930px) {
+    .all-listings-section {
+        .all-listings {
+            align-items: center;
+            justify-content: center;
+
+            .listing {
+                width: calc(100% - 160px);
+                aspect-ratio: 1.2 / 1.4;
+                .listing-content {
+                    .listing-title {
+                        font-size: 2vw;
+                    }
+                    .total-bids {
+                        font-size: 2vw;
+                    }
+                }
+            }
+        }
+
     }
 }

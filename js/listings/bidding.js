@@ -4,11 +4,6 @@ import { listingId } from './single-listing.js';
 
 const username = localStorage.getItem("username");
 
-if (!username) {
-    alert("You must be logged in to place a bid.");
-    window.location.href = "auth/login.html";
-}
-
 async function fetchUserCredits() {
     const token = localStorage.getItem("accessToken") || sessionStorage.getItem("accessToken");
 

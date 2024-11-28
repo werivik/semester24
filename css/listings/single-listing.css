@@ -121,30 +121,54 @@
             .description {
                 margin-bottom: 120px;
             }
-        }
 
-        .listing-creator {
-            margin-top: 80px;
+            .product-meta {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
         }
 
         .listing-date-info {
-            font-size: 14px;
-            font-style: italic;
+            margin-top: 60px;
+            .created-date, .updated-date {
+                font-size: 14px;
+                font-style: italic;
+            }
         }
 
     }
 
-    .place-bid-section {
-        background-color: pink;
-        height: 500px;
-        width: 500px;
-    }
+    .place-bid-content {
+        input {
+            border: solid 1.5px #29272F;
+            border-radius: 10px;
+            height: 35px;
+            background-color: #f2f2f200;
 
-    .hello-there {
-        background-color: pink;
-        height: 500px;
-        width: 500px;
-        position: relative;
-        z-index: 999;
+            &::placeholder{
+                color:#29272F;
+                opacity: 75%;
+                padding-left: 5px;
+                font-family: "Libre Bodoni", serif;
+            }
+        }
+
+        .place-bid {
+            background-color: #D6650F;
+            color: #F2F2F2;
+            height: 35px;
+            width: 55px;
+            margin-left: 10px;
+            border: none;
+            border-radius: 10px;
+            font-family: "Libre Bodoni", serif;
+
+            &:hover {
+                cursor: pointer;
+                background-color: #81AB76;
+                transition: 0.2s;
+            }
+        }
     }
 }
