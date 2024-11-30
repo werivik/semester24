@@ -5,7 +5,7 @@
     <title>Login</title>
     <link rel="stylesheet" href="/css/head/nav.css">
     <link rel="stylesheet" href="/css/footer.css">
-    <link rel="stylesheet" href="/css/auth/login.css">
+    <link rel="stylesheet" href="/css/auth/form.css">
     <link rel="stylesheet" href="/css/body.css">
 
     <script type="module" src="/js/auth/login.js" defer></script>
@@ -25,13 +25,30 @@
         <nav>
             <ul>
                 <div class="logo">
-                    <a href="/index.html">
+                    <a href="../index.html">
                         <img src="/media/logos/logo-dark.png" alt="">
                     </a>
                 </div>
 
-                <div class="links">
-                    <a href="/index.html">Home</a>
+                <div class="responsive-menu">
+                    <input type="checkbox" id="menuToggle" class="menu-toggle">
+                    <label for="menuToggle" class="hamburger-menu">
+                        <div class="hamburger-line"></div>
+                        <div class="hamburger-line"></div>
+                        <div class="hamburger-line"></div>
+                    </label>
+
+                    <div class="links2">
+                        <a href="../index.html"  class="active-link">Home</a>
+                        <a href="/listings/all-listings.html">Listings</a>
+                        <a href="">About us</a>
+                        <a href="">Contact us</a>
+                    </div>
+
+                </div>
+
+                <div class="links" id="navLinks">
+                    <a href="../index.html"  class="active-link">Home</a>
                     <div class="nav-dot"></div>
                     <a href="/listings/all-listings.html">Listings</a>
                     <div class="nav-dot"></div>
@@ -41,19 +58,23 @@
                 </div>
 
                 <div class="user-options">
+
                     <div class="login-options">
                         <a href="/auth/login.html" class="option-login">Login</a>
                         <a href="/auth/register.html" class="option-register">REGISTER</a>
                     </div>
 
                     <div class="user-profile">
-                        <div class="credit-amount">
-                            <p></p>
-                        </div>
-                        <div class="avatar">
-                            <img src="" alt="">
-                        </div>
+                        <a href="/profile/profile.html">
+                            <div class="credit-amount">
+                                <p>$ 0 Credits</p>
+                            </div>
+                            <div class="avatar">
+                                <img src="/media/default-profile.jpg" alt="">
+                            </div>
+                        </a>
                     </div>
+
                 </div>
 
             </ul>
@@ -64,67 +85,73 @@
 
         <div class="margin-section">
 
-            <section>
+            <section class="input-form">
                 <h1>Login</h1>
     
-                <form id="loginForm">
-                    <div>
+                <form id="loginForm"  class="login-form">
+                    
+                    <div class="inputs">
                         <label for="email">Email</label>
                         <input id="email" type="email" name="email" required />
                     </div>
               
-                    <div>
+                    <div class="inputs">
                         <label for="password">Password</label>
                         <input type="password" name="password" id="password" required />
                     </div>
               
-                    <button type="submit">Login</button>
+                    <div class="submit-button">
+                        <button type="submit" class="login-button">
+                            Login
+                        </button>
+                    </div>
     
-                    <p>
+                    <p class="suggestion">
                         Don't have an account? 
                         <a href="/register.html">Register here</a>
                     </p>
+
                 </form>
             </section>
 
         </div>
 
-        <footer>
-            <div class="questions">
-                <h3>Have Any Questions?</h3>
-                <p>With us you can both buy and sell various products, from cellphones to cars! You must be a registered user to be able to sell and buy, and for first time users you get 1000 Credits to use!</p>
-                <p>Contact Us on this Phone Number or Email address, or fill out a contact form in our Contact Us Page.</p>
-                <div class="questions-contacts">
-                    <span><i class="fa-solid fa-phone"></i>1234-567-8910</span>
-                    <span><i class="fa-solid fa-envelope"></i>weronika.vik@gmail.com</span>
-                </div>
-            </div>
-            <div class="footer-links">
-                <div class="about">
-                    <h4><a href="/error.html" class="footer-links-title">About</a></h4>
-                    <a href="/error.html">Our Mission</a>
-                    <a href="/error.html">Our Team</a>
-                    <a href="/error.html">History</a>
-                    <a href="/error.html">Careers</a>
-                    <a href="/error.html">FAQs</a>
-                </div>
-                <div class="Services">
-                    <h4><a href="/error.html" class="footer-links-title">Services</a></h4>
-                    <a href="/error.html">Buy</a>
-                    <a href="/error.html">Sell</a>
-                    <a href="/error.html">Credit</a>
-                    <a href="/error.html">FAQs</a>    
-                </div>
-                <div class="Contact">
-                    <h4><a href="/error.html" class="footer-links-title">Contact</a></h4>
-                    <a href="/error.html">Phone</a>
-                    <a href="/error.html">Email</a>
-                    <a href="/error.html">Socials</a>
-                </div>
-            </div>
-        </footer>
-
     </main>
+
+    <footer>
+        <div class="questions">
+            <h3>Have Any Questions?</h3>
+            <p>With us you can both buy and sell various products, from cellphones to cars! You must be a registered user to be able to sell and buy, and for first time users you get 1000 Credits to use!</p>
+            <p>Contact Us on this Phone Number or Email address, or fill out a contact form in our Contact Us Page.</p>
+            <div class="questions-contacts">
+                <span><i class="fa-solid fa-phone"></i>1234-567-8910</span>
+                <span><i class="fa-solid fa-envelope"></i>vikweronika@gmail.com</span>
+            </div>
+        </div>
+        <div class="footer-links">
+            <div class="about">
+                <h4><a href="/error.html" class="footer-links-title">About</a></h4>
+                <a href="/error.html">Our Mission</a>
+                <a href="/error.html">Our Team</a>
+                <a href="/error.html">History</a>
+                <a href="/error.html">Careers</a>
+                <a href="/error.html">FAQs</a>
+            </div>
+            <div class="Services">
+                <h4><a href="/error.html" class="footer-links-title">Services</a></h4>
+                <a href="/error.html">Buy</a>
+                <a href="/error.html">Sell</a>
+                <a href="/error.html">Credit</a>
+                <a href="/error.html">FAQs</a>    
+            </div>
+            <div class="Contact">
+                <h4><a href="/error.html" class="footer-links-title">Contact</a></h4>
+                <a href="/error.html">Phone</a>
+                <a href="/error.html">Email</a>
+                <a href="/error.html">Socials</a>
+            </div>
+        </div>
+    </footer>
     
 </body>
 

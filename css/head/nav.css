@@ -200,7 +200,11 @@ ul {
         left: 50%;
         transform: translate(-50%);
         height: 200px;
-        background-color: #F4F3E5;
+        background-color: #29272F;
+        background-image: url(/media/textures/grain-texture2.png);
+        background-repeat: repeat;
+        background-size: contain;
+        background-size: 100px;
         border-radius: 0px 0px 25px 25px;
         border: solid 1.5px #29272F;
         padding: 20px;
@@ -208,18 +212,11 @@ ul {
 
         a {
             text-decoration: none;
-            color: #29272F;
+            color: #F2F2F2;
             font-size: 16px;
             padding: 5px;
             border-radius: 10px;
             border: solid 1.5px #29272f00;
-    
-            &:hover {
-                border-color: #29272F;
-                transition: 0.3s;
-                background-color: #29272F;
-                color: #F2F2F2;
-            }
         }
     }
 }

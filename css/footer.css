@@ -1,5 +1,9 @@
 footer {
     background-color: #29272F;
+    background-image: url(/media/textures/grain-texture2.png);
+    background-repeat: repeat;
+    background-size: contain;
+    background-size: 100px;
     padding: 20px;
     left: 0;
     bottom: 0;
@@ -16,6 +20,7 @@ footer {
     .questions {
         width: 35%;
         margin-top: 50px;
+        margin-left: 5%;
 
         h3 {
             font-size: 27px;
@@ -42,6 +47,7 @@ footer {
         width: 45%;
         display: flex;
         flex-direction: row;
+        margin-right: 5%;
 
         justify-content: space-evenly;
 
@@ -52,12 +58,22 @@ footer {
 
             .footer-links-title {
                 font-size: 25px;
+
+                &:hover {
+                    color: #81AB76;
+                    transition: 0.2s;
+                }
             }
 
             a {
                 text-decoration: none;
                 color: #F2F2F2;
                 font-size: 20px;
+
+                &:hover {
+                    color: #D6650F;
+                    transition: 0.2s;
+                }
             }
         }
     }
