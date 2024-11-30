@@ -200,13 +200,9 @@ ul {
         left: 50%;
         transform: translate(-50%);
         height: 200px;
-        background-color: #29272F;
-        background-image: url(/media/textures/grain-texture2.png);
-        background-repeat: repeat;
-        background-size: contain;
-        background-size: 100px;
         border-radius: 0px 0px 25px 25px;
         border: solid 1.5px #29272F;
+        background-color: #D6650F;
         padding: 20px;
         gap: 20px; 
 
@@ -217,6 +213,94 @@ ul {
             padding: 5px;
             border-radius: 10px;
             border: solid 1.5px #29272f00;
+        }
+    }
+
+    .user-options2 {
+        display: none;
+        flex-direction: column;
+    }
+
+    .login-options2 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        .option-login2 {
+            padding: 10px;
+            border: solid #F2F2F2 1.5px;
+            border-radius: 10px;
+            color: #F2F2F2;
+            font-size: 14px;
+
+            text-decoration: none;
+
+            &:hover {
+                background-color: #81AB76;
+                border-color: #81AB76;
+                transition: 0.2s;
+            }
+        }
+
+        .option-register2 {
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 14px;
+
+            text-decoration: none;
+            color: #F2F2F2;
+            background-color: #29272F;
+
+            &:hover {
+                background-color: #81AB76;
+                transition: 0.2s;
+                background-image: none;
+            }
+        }
+    }
+
+    .user-profile2 {
+        display: none;
+        margin-top: -10px;
+
+        a {
+            text-decoration: none;
+            color: #F2F2F2;
+            display: flex;
+            flex-direction: row;
+            background-color: #29272F;
+            background-image: url(/media/textures/grain-texture2.png);
+            background-repeat: repeat;
+            background-size: contain;
+            background-size: 100px;
+            color: #F2F2F2;
+            padding: 5px;
+            padding-right: 10px;
+            border-radius: 20px;
+
+            .credit-amount2 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-left: 10px;
+                padding-right: 5px;
+                font-size: 13px;
+            }
+    
+            .avatar2 {
+                width: 40px;
+                height: 40px;
+                border-radius: 100px;
+                border: solid 1.5px #F2F2F2;
+    
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: contain;
+                    border-radius: 100px;
+                }
+            }
         }
     }
 }
@@ -263,21 +347,77 @@ ul {
 }
 
 @media (max-width: 990px) {
-
     .links {
         display: none;
     }
-
     .responsive-menu {
         display: block;
     }
-
     .menu-toggle:checked ~ .links2 {
         display: flex;
     }
-
     .hamburger-menu {
         display: flex;
+        z-index: 999;
+    }
+    .logo {
+        height: 60px;
+        width: 60px;
+    
+        img {
+            height: 60px;
+            width: 60px;
+        }
+    }
+    .user-options {
+        .login-options {
+            gap: 10px;
+            .option-login {
+                font-size: 14px;
+            }
+            .option-register {
+                font-size: 14px;
+            }
+        }
+    
+        .user-profile {
+            display: flex;
+    
+            a {
+    
+                .credit-amount {
+                    font-size: 11px;
+                }
+        
+                .avatar {
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 990px) {
+    .user-options {
+        display: none;
     }
 
+    .responsive-menu { 
+        
+        .links2 {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            width: 250px;
+            top: 49.5px;
+            left: 25%;
+            transform: translate(-74%);
+            height: 250px;
+    
+        }
+        .user-options2 {
+            display: flex;
+        }
+    }
 }
