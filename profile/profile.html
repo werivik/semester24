@@ -110,17 +110,19 @@
     
                         <div class="profile-info">
         
+                            <div id="profileCredit" class="profile-credit">1000 Credits</div>
+
                             <div id="avatar-container" class="avatar-container">
                                 <div id="userCredit" class="user-credit"></div>
-                                <img id="avatar" src="" alt="Avatar"/>
+                                <img id="avatar" src="/media/default-profile.jpg" alt="Avatar"/>
                             </div>
     
                             <div class="name-email-bio">
-                                <div id="name" class="user-name"></div>
+                                <div id="name" class="user-name">Username</div>
         
-                                <div id="email" class="user-email"></div>
+                                <div id="email" class="user-email">Email</div>
             
-                                <div id="bio" class="user-bio"></div>
+                                <div id="bio" class="user-bio">Hi! You can now change your bio to better fit your profile...</div>
                             </div>
         
                         </div>
@@ -149,12 +151,14 @@
         
                 <section class="users-listings-section" id="users-listings-section">
         
-                    <h2>My Listings</h2>
-        
-                    <button id="makeListing" onclick="window.location.href='create-listing.html'" class="create-button"><i class="fa-solid fa-plus"></i>New Listing</button>
+                    <div class="user-listings-title">
+                        <h2>My Listings</h2>
+                        <button id="makeListing" onclick="window.location.href='create-listing.html'" class="create-button"><i class="fa-solid fa-plus"></i>Create Listing</button>
+                    </div>
                     
                     <div class="all-users-listings">
                         <div id="user-listings" class="listings">
+                            <p></p>
                         </div>
                     </div>
         
@@ -191,7 +195,9 @@
         
                         </form>
         
-                        <button id="saveChanges" class="save-button">Save Changes</button>
+                        <div class="save-button-content">
+                            <button id="saveChanges" class="save-button">Save Changes</button>
+                        </div>
                     </div>
         
                 </section>
