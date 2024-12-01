@@ -396,15 +396,20 @@ ul {
             }
         }
     }
+
+    nav {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
 }
 
-@media (max-width: 990px) {
+@media (max-width: 690px) {
     .user-options {
         display: none;
     }
 
     .responsive-menu { 
-        
+        margin-right: 5%;
         .links2 {
             display: none;
             flex-direction: column;

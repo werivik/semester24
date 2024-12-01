@@ -55,12 +55,14 @@ export async function loadNewestListings() {
     let currentIndex = 0;
 
     function displaySliderListings() {
-      const indexes = [
-        currentIndex,
-        (currentIndex + 1) % listings.length,
-        (currentIndex + 2) % listings.length,
-      ];
-
+      const screenWidth = window.innerWidth;
+      const itemsToShow = screenWidth <= 1100 ? 2 : 3;
+    
+      const indexes = [];
+      for (let i = 0; i < itemsToShow; i++) {
+        indexes.push((currentIndex + i) % listings.length);
+      }
+    
       sliderContainer.innerHTML = indexes
         .map((index) => {
           const listing = listings[index];
@@ -69,9 +71,11 @@ export async function loadNewestListings() {
             <div class="listing" id="newest-listing-${listing.id}" data-id="${listing.id}">
               <div class="listing-content">
                 <div class="listing-media">
-                  ${listing.media && listing.media.length > 0
-                    ? `<img src="${listing.media[0].url}" alt="${listing.media[0].alt}"/>`
-                    : ""}
+                  ${
+                    listing.media && listing.media.length > 0
+                      ? `<img src="${listing.media[0].url}" alt="${listing.media[0].alt}"/>`
+                      : ""
+                  }
                 </div>
                 <div class="listing-details">
                   <div class="listing-title">
@@ -108,6 +112,7 @@ export async function loadNewestListings() {
     prevButton.addEventListener("click", moveToPreviousSlide);
 
     displaySliderListings();
+    window.addEventListener("resize", displaySliderListings);
 
     sliderContainer.addEventListener("click", (event) => {
       const listingElement = event.target.closest(".listing");

@@ -280,7 +280,7 @@
 .newest-listings {
     display: flex;
     flex-direction: row;  
-    gap: 26px; 
+    justify-content: space-evenly;
     margin-left: 80px;
     margin-right: 80px;
     margin-top: 40px;
@@ -290,10 +290,11 @@
 
     color: #F2F2F2;
     z-index: 8;
+    width: calc(30% - 20px);
 
     .listing-content {
         height: 430px;
-        width: 360px;
+        width: 100%;
 
         padding: 10px;
 
@@ -306,8 +307,7 @@
         position: relative;
 
         .listing-media {
-            width: 350px;
-            margin-left: 5px;
+            width: 100%;
             height: 272px;
             border-radius: 25px;
             padding-bottom: 0px;
@@ -329,6 +329,7 @@
             height: 135px;
             margin-top: 0px;
             padding-top: 0px;
+            overflow: hidden;
         }
 
         .listing-title {
@@ -353,7 +354,7 @@
 
     .listing-content::before {
         content: "";
-        width: 216px;
+        width: 55%;
         height: 88px;
         border-radius: 0px 0px 25px 25px;
         position: absolute;
@@ -368,19 +369,18 @@
 
     .see-listing {
         background-color: #81AB76;
-        margin-left: 226px;
+        margin-left: 62%;
         margin-top: 10px;
-        width: 140px;
+        width: 45%;
         height: 78px;
         border: none;
         border-radius: 0px 25px 25px 25px;
-        font-size: 18px;
         font-weight: 600;
 
         i {
             font-size: 40px;
-            width: 150px;
-            height: 78px;
+            width: 100%;
+            height: 100%;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -390,7 +390,7 @@
             transition: 0.2s;
             cursor: pointer;
 
-            margin-left: 240px;
+            margin-left: 65%;
 
             background-color: #D6650F;
         }
@@ -414,7 +414,7 @@
             transition: 0.2s;
             cursor: pointer;
 
-            margin-left: 62%;
+            margin-left: 65%;
 
             background-color: #D6650F;
         }
@@ -465,4 +465,316 @@
             transition: 0.2s;
         }
     }
+}
+
+
+/*Top-section Responsive*/
+@media (max-width: 1350px) {
+    
+    .top-section-content-left {
+        .content-image-dividers {
+            .content-left {
+                .left-titles {
+                    font-size: 35px;
+                }
+            }
+        }
+    }
+    
+}
+
+@media (max-width: 1150px) {
+    .top-section {
+        height: 580px;
+    }
+    
+    .top-section-border {
+        width: 90%;
+        padding: 20px;
+    }
+    
+    .top-section-content-left {
+        padding-left: 20px;
+        .content-image-dividers {
+            .content-left {
+                .left-titles {
+                    font-size: 32px;
+                }
+            }
+        }
+    }
+    
+    .top-section-content-right {
+        padding: 20px;    
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .content-right {
+            padding: 10px;
+            height: 339px;    
+            .right-titles {
+                height: 100px;
+                h3 {
+                    font-size: 18px;
+                }
+                h4 {
+                    font-size: 10px;
+                }
+            }
+    
+            .register-form {
+                height: 73.3%;
+                gap: 20px;
+    
+                .registration-username, .registration-email, .registration-password {
+                    width: 200px;
+                    height: 30px;
+                }
+            }
+        }
+    
+        .content-right::before {
+            height: 58px;
+        }
+    
+        .register-button {
+            background-color: #D6650F;
+            margin-left: 52.5%;
+            margin-top: 2.5%;
+            width: 43%;
+            height: 48px;
+
+        }
+    }
+}
+
+@media (max-width: 755px) {
+    .top-section {
+        height: 480px;
+    }
+    
+    .top-section-border {
+        padding: 10px;
+    }
+    
+    .top-section-content-left {
+        padding-left: 10px;
+        width: 40%;
+        .content-image-dividers {
+            .content-left {
+                .left-titles {
+                    font-size: 25px;
+                }
+            }
+        }
+    }
+    
+    .top-section-content-right {
+        padding: 10px;    
+        width: 55%;
+        .content-right {
+            padding: 10px;
+            height: 300px;    
+            .right-titles {
+                height: 70px;
+                h3 {
+                    font-size: 16px;
+                }
+                h4 {
+                    font-size: 10px;
+                }
+            }
+        }
+    
+        .content-right::before {
+            height: 48px;
+        }
+    
+        .register-button {
+            height: 38px;
+            font-size: 14px;
+        }
+    }
+}
+
+@media (max-width: 650px) {
+
+    .top-section-content-left {
+        .content-image-dividers {
+            .content-left {
+                .left-titles {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 550px) {
+
+    .top-section-content-left {
+        width: 50%;
+        .content-image-dividers {
+            .content-left {
+                .left-titles {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+    .top-section-content-right {
+        width: 45%;
+        .content-right {
+            .register-form {
+    
+                .registration-username, .registration-email, .registration-password {
+                    width: 150px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 550px) {
+
+    .top-section-content-left {
+        width: 50%;
+        .content-image-dividers {
+            .content-left {
+                .left-titles {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+    .top-section-content-right {
+        width: 45%;
+        .content-right {
+            .register-form {
+    
+                .registration-username, .registration-email, .registration-password {
+                    width: 150px;
+                }
+            }
+        }
+
+        .register-button {
+            font-size: 12px;
+        }
+    }
+}
+
+@media (max-width: 455px) {
+
+    .top-section-content-left {
+        display: none;
+        .content-image-dividers {
+            .content-left {
+                .left-titles {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+    .top-section-content-right {
+        width: 100%;
+        .content-right {
+            .register-form {
+    
+                .registration-username, .registration-email, .registration-password {
+                    width: 150px;
+                }
+            }
+        }
+
+        .register-button {
+            font-size: 12px;
+        }
+    }
+}
+
+
+
+
+/*Middle section responsive*/
+
+@media (max-width: 1300px) {
+    
+.middle-section {
+    margin-top: 80px;
+    height: 80vh;
+}
+
+.middle-section-title {
+
+    h2 {
+        font-size: 30px;
+    }
+}
+
+.listing-section {
+    height: 450px;
+}
+
+.newest-listings { 
+    margin-left: 75px;
+    margin-right: 75px;
+}
+
+.listing {
+
+    .listing-content {
+        height: 375px;
+
+        .listing-media {
+            height: 225px;
+        }
+
+        .listing-details {
+        }
+
+        .listing-title {
+            font-size: 17px;
+        }
+
+        .listing-description {
+            font-size: 13px;
+        }
+
+        .total-bids {
+            height: 50px;
+            font-size: 17px;
+        }
+    }
+
+    .listing-content::before {
+        height: 50px;
+    }
+
+    .see-listing {
+        height: 45px;
+        margin-top: 5px;
+
+        i {
+            font-size: 30px;
+        }
+    }
+}
+
+}
+
+@media (max-width: 1100px) {
+    
+    .newest-listings { 
+        margin-left: 45px;
+        margin-right: 60px;
+    }
+
+    .listing {
+        width: calc(45% - 20px);
+    }
+
 }

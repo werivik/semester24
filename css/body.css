@@ -16,3 +16,11 @@ main {
     margin-right: 10%;
     margin-top: 150px;
 }
+
+@media (max-width: 990px) {
+    .margin-section {
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 150px;
+    }
+}

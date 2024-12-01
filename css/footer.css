@@ -118,6 +118,7 @@ footer {
         justify-content: space-evenly;
 
         height: 600px;
+        padding-bottom: 80px;
     
         .questions {
             width: 85%;
