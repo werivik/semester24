@@ -3,8 +3,12 @@ import { headers } from "../headers.js";
 
 let sortBy = "newest";
 let currentPage = 1;
-const listingsPerPage = 9;
 let tagFilter = null;
+
+function getListingsPerPage() {
+  const screenWidth = window.innerWidth;
+  return screenWidth <= 1300 ? 4 : 9;
+}
 
 export async function fetchListings() {
   try {
@@ -51,15 +55,17 @@ async function loadListings() {
       return;
     }
 
+    const listingsPerPage = getListingsPerPage();
+
     const sortedListings = [...listings].sort((a, b) => {
       if (sortBy === "newest") {
         return new Date(b.created) - new Date(a.created);
       } 
-
+      
       else if (sortBy === "oldest") {
         return new Date(a.created) - new Date(b.created);
       }
-
+      
       return 0;
     });
 
@@ -108,10 +114,10 @@ async function loadListings() {
     listingsContainer.innerHTML = listingsHtml;
 
     const pageNumbersContainer = document.getElementById("pageNumbers");
-    pageNumbersContainer.innerHTML = '';
+    pageNumbersContainer.innerHTML = "";
 
     const pageRange = getPageRange(totalPages, currentPage);
-    pageRange.forEach(pageNumber => {
+    pageRange.forEach((pageNumber) => {
       const pageButton = document.createElement("button");
       pageButton.textContent = pageNumber;
       pageButton.classList.add("page-button");
@@ -129,26 +135,27 @@ async function loadListings() {
     });
 
     document.getElementById("prevPage").disabled = currentPage === 1;
-    document.getElementById("nextPage").disabled = currentPage === totalPages;
+    document.getElementById("nextPage").disabled =
+      currentPage === totalPages;
 
     const tagCounts = {};
     listings.forEach((listing) => {
+     
       if (Array.isArray(listing.tags)) {
-
         listing.tags.forEach((tag) => {
           const trimmedTag = tag.trim();
+          
           if (trimmedTag) {
             tagCounts[trimmedTag] = (tagCounts[trimmedTag] || 0) + 1;
           }
         });
-
       }
     });
 
     const mostUsedTags = Object.entries(tagCounts)
-    .sort((a, b) => b[1] - a[1])
-    .slice(0, 5)
-    .map(([tag]) => tag);
+      .sort((a, b) => b[1] - a[1])
+      .slice(0, 5)
+      .map(([tag]) => tag);
 
     if (popularTagsContainer) {
       popularTagsContainer.innerHTML = mostUsedTags
@@ -171,12 +178,14 @@ async function loadListings() {
       });
     });
   } 
-
+  
   catch (error) {
     console.error("Error displaying listings:", error);
     const listingsContainer = document.querySelector(".all-listings");
+
     if (listingsContainer) {
-      listingsContainer.innerHTML = "<p>Failed to load listings. Please try again later.</p>";
+      listingsContainer.innerHTML =
+        "<p>Failed to load listings. Please try again later.</p>";
     }
   }
 }
@@ -194,7 +203,7 @@ document.getElementById("prevPage").addEventListener("click", () => {
 });
 
 document.getElementById("nextPage").addEventListener("click", () => {
-  const totalPages = Math.ceil(totalListings / listingsPerPage);
+  const totalPages = Math.ceil(totalListings / getListingsPerPage());
   if (currentPage < totalPages) {
     currentPage++;
     loadListings();
@@ -209,6 +218,7 @@ document.querySelector(".reset-tags").addEventListener("click", () => {
 
 document.addEventListener("DOMContentLoaded", () => {
   loadListings();
+  window.addEventListener("resize", loadListings);
 });
 
 function getPageRange(totalPages, currentPage) {
@@ -228,6 +238,5 @@ function getPageRange(totalPages, currentPage) {
 
   return range;
 }
-
 
 
