@@ -100,7 +100,7 @@ footer {
     .margin-section {
         margin-left: 5%;
         margin-right: 5%;
-        background-color: pink;
+        width: 90%;
     }
 }
 

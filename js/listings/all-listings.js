@@ -5,11 +5,6 @@ let sortBy = "newest";
 let currentPage = 1;
 let tagFilter = null;
 
-function getListingsPerPage() {
-  const screenWidth = window.innerWidth;
-  return screenWidth <= 1300 ? 4 : 9;
-}
-
 export async function fetchListings() {
   try {
     let url = `${API_LISTINGS}?_count=true`;
@@ -189,6 +184,7 @@ async function loadListings() {
     }
   }
 }
+
 
 document.getElementById("sort-by").addEventListener("change", (event) => {
   sortBy = event.target.value;
