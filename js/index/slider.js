@@ -56,8 +56,20 @@ export async function loadNewestListings() {
 
     function displaySliderListings() {
       const screenWidth = window.innerWidth;
-      const itemsToShow = screenWidth <= 1100 ? 2 : 3;
-    
+
+      let itemsToShow;
+      if (screenWidth <= 700) {
+        itemsToShow = 1;
+      }
+
+      else if (screenWidth <= 1100) {
+        itemsToShow = 2;
+      }
+
+      else {
+        itemsToShow = 3;
+      }
+      
       const indexes = [];
       for (let i = 0; i < itemsToShow; i++) {
         indexes.push((currentIndex + i) % listings.length);
