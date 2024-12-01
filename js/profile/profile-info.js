@@ -113,15 +113,15 @@ document.addEventListener("DOMContentLoaded", () => {
                     <h3 class="title">${listing.title}</h3>
                     <p class="description">${listing.description}</p>
                     <div class="lower-content">
-                        <p class="tags">Tags: ${listing.tags.join(', ')}</p>
+                        <p class="tags">${listing.tags.join('    ')}</p>
                         <p class="bidding-end">Ends at: ${new Date(listing.endsAt).toLocaleString()}</p>
                         <p class="total-bids">Bids: ${listing._count.bids}</p>
                      </div>
                 </div>
 
                 <div class="edit-buttons">
-                    <button data-id="${listing.id}" class="edit-listing-button" id="editButton">Edit</button>
-                    <button data-id="${listing.id}" data-title="${listing.title}" class="delete-listing-button" id="deleteButton">Delete</button>
+                    <button data-id="${listing.id}" class="edit-listing-button" id="editButton">EDIT</button>
+                    <button data-id="${listing.id}" data-title="${listing.title}" class="delete-listing-button" id="deleteButton">DELETE</button>
                 </div>
             </a>
             `;

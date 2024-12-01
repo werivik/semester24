@@ -156,7 +156,7 @@ main {
         border-radius: 5px;
         font-size: 15px;
         font-weight: 600;
-    
+        font-family: "Libre Bodoni", serif;
         width: 150px;
 
         &:hover {

@@ -1,0 +1,202 @@
+main {
+    height: 100vh;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 140px;
+    color: #29272F;
+}
+
+.preview-section {
+
+    width: 40%;
+    height: 80vh;
+
+.preview-listing {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 15px;
+
+    border-radius: 15px;
+    box-shadow: 1px 1px 10px 1px rgba(0, 0, 2, 0.212);
+
+    background-color: #29272F;
+    color: #F2F2F2;
+
+    display: flex;
+    flex-direction: column;
+    margin-top: 0px;
+    padding-top: 0px;
+
+    .preview-media {
+        width: 95%;
+        height: 100%;
+        max-height: 450px;
+        margin-top: 0px;
+        border-radius: 15px;
+        padding: 10px;
+
+        img {
+            margin-top: 0px;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+    }
+
+    .preview-listing-content{ 
+
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+
+        .preview-title{
+            font-size: 25px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            margin-top: 20px;
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+
+        .preview-description {
+            font-size: 17px;
+            margin-bottom: 50px;
+        }
+
+        .preview-tags {
+            display: flex;
+            flex-direction: row;
+            gap: 15px;
+            margin-bottom: 10px;
+        }
+
+        .preview-ends {
+            opacity: 75%;
+        }
+    }
+  }  
+}
+
+.update-section {
+    height: 80vh;
+    width: 60%;
+
+    margin-left: 5%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+
+    h1 {
+        font-size: 30px;
+        font-weight: 700;
+
+    }
+
+    .update-form {
+
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+
+        width: 100%;
+
+        label {
+            font-weight: 600;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 75%;
+            background-color: #F2F2F2;
+            border: solid 1.5px #29272F;
+            border-radius: 100px;
+            padding: 5px;
+
+            &[type="text"]::placeholder, &[type="url"]::placeholder{
+                color: #29272F;
+            }
+        }
+
+        textarea {
+            width: 75%;
+            height: 150px;
+            background-color: #F2F2F2;
+            border: solid 1.5px #29272F;
+            border-radius: 15px;
+            padding: 5px;
+
+            &::placeholder {
+                color: #29272F;
+            }
+        }
+
+        .ends-at {
+
+            input{
+                width: 200px;
+            }
+        }
+
+    }
+
+    .buttons {
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+    }
+
+    .submit-button {
+        background-color: #81AB76;            
+        color: #F2F2F2;
+        padding: 10px;
+        border: none;
+        margin-top: 80px;
+        border-radius: 5px;
+        font-size: 15px;
+        font-weight: 600;
+        width: 150px;
+        font-family: "Libre Bodoni", serif;
+
+        &:hover {
+            cursor: pointer;
+            transition: 0.2s;
+            background-color: #29272F;
+            background-image: url(/media/textures/grain-texture2.png);
+            background-repeat: repeat;
+            background-size: contain;
+            background-size: 100px; 
+        }
+    }
+
+    .delete-button {
+        background-color: #D6650F;            
+        color: #F2F2F2;
+        border: none;
+        padding: 10px;
+        margin-top: 80px;
+        border-radius: 5px;
+        font-size: 15px;
+        font-weight: 600;
+        font-family: "Libre Bodoni", serif;
+        width: 150px;
+        &:hover {
+            cursor: pointer;
+            transition: 0.2s;
+            background-color: #29272F;
+            background-image: url(/media/textures/grain-texture2.png);
+            background-repeat: repeat;
+            background-size: contain;
+            background-size: 100px; 
+        }
+    }
+
+}

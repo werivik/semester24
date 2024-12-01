@@ -8,11 +8,11 @@
     <link rel="stylesheet" href="/css/footer.css">
     <link rel="stylesheet" href="/css/body.css">
     <link rel="stylesheet" href="/css/profile/profile-info.css">
+    <link rel="stylesheet" href="/css/popup.css">
 
     <script type="module" src="/js/nav/account.js" defer></script>
     <script type="module" src="/js/profile/profile-info.js" defer></script>  
     <script type="module" src="/js/profile/update-profile.js" defer></script> 
-    <script type="module" src="/js/profile/credit-gift.js" defer></script>     
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,7 +24,6 @@
 </script>
 
 <body>
-
     <header>
         <nav>
             <ul>
@@ -43,10 +42,30 @@
                     </label>
 
                     <div class="links2">
-                        <a href="../index.html">Home</a>
+                        <a href="../index.html"  class="active-link">Home</a>
                         <a href="/listings/all-listings.html">Listings</a>
                         <a href="/error.html">About us</a>
                         <a href="/error.html">Contact us</a>
+
+                        <div class="user-options2">
+
+                            <div class="login-options2">
+                                <a href="/auth/login.html" class="option-login2">Login</a>
+                                <a href="/auth/register.html" class="option-register2">REGISTER</a>
+                            </div>
+        
+                            <div class="user-profile2">
+                                <a href="/profile/profile.html">
+                                    <div class="avatar2">
+                                        <img src="/media/default-profile.jpg" alt="">
+                                    </div>
+                                    <div class="credit-amount2">
+                                        <p>$ 0 Credits</p>
+                                    </div>
+                                </a>
+                            </div>
+        
+                        </div>
                     </div>
 
                 </div>
@@ -69,7 +88,7 @@
                     </div>
 
                     <div class="user-profile">
-                        <a href="/profile/profile.html">
+                        <a href="/profile/profile.html" class="active-profile">
                             <div class="credit-amount">
                                 <p>$ 0 Credits</p>
                             </div>
@@ -140,13 +159,6 @@
             </section>
     
             <div class="right-side-sections">
-
-                <section class="credit-gift-section">
-                    <div class="credit-gift-content">
-                        <h2>You have recieved a gift of 1000 Credits!</h2>
-                        <button class="accept-gift" id="acceptGift">Accept</button>
-                    </div>
-                </section>
         
                 <section class="users-listings-section" id="users-listings-section">
         

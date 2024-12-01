@@ -7,14 +7,13 @@
 
 .profile-info-section {
     position: sticky;
-    overflow: hidden;
     background-color: #29272F;
     background-image: url(/media/textures/grain-texture2.png);
     background-repeat: repeat;
     background-size: contain;
     background-size: 100px; 
     height: 75vh;
-    width: 275px;
+    width: 300px;
     border-radius: 15px;
     color: #F2F2F2;
 
@@ -179,11 +178,105 @@
             }
         }
 
+        .all-users-listings {
+            margin-top: 40px;
+            .listings {
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                width: 100%;
+
+                .listing {
+                    width: calc(45% - 20px);
+                    height: 550px;
+                    padding: 10px;
+                    background-color: #29272F;
+                    border-radius: 25px;
+                    color: #F2F2F2;
+                    text-decoration: none;
+                    position: relative;
+
+                    .listing-image {
+                        border-radius: 25px;
+                        height: 275px;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            border-radius: 25px;
+                            object-fit: cover;
+                        }
+                    }
+
+                    .listing-content {
+
+                        .title {
+
+                        }
+                        .description {
+                            height: 60px;
+                            overflow: hidden;
+                        }
+                        .lower-content {
+                            margin-top: 20px;
+                            font-size: 14px;
+                            .tags{
+                                opacity: 65%;
+                            }
+                            .bidding-end{}
+                            .total-bids{}
+                        }
+                    }
+
+                    .edit-buttons {
+                        position: absolute;
+                        height: 98%;
+                        width: 94.5%;
+                        top: 0;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: end;
+                        justify-content: space-around;
+                        .edit-listing-button {
+                            background-color: #81AB76;
+                            border: none;
+                            border-radius: 10px;
+                            height: 30px;
+                            width: 75px;
+                            font-size: 14px;
+                            font-family: "Libre Bodoni", serif;
+                            &:hover {
+                                cursor: pointer;
+                                color: #F2F2F2;
+                                transition: 0.2s;
+                            }
+                        }
+                        .delete-listing-button {
+                            background-color: #D6650F;
+                            border: none;
+                            border-radius: 10px;
+                            height: 30px;
+                            width:75px;
+                            font-size: 14px;
+                            font-family: "Libre Bodoni", serif;
+                            &:hover {
+                                cursor: pointer;
+                                color: #F2F2F2;
+                                transition: 0.2s;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
     }
 
     .update-user-info {
         height: 100%;
-        padding-bottom: 360px;
+        padding-bottom: 160px;
         width: 100%;
         h2 {
             margin-bottom: 80px;
@@ -280,92 +373,4 @@
             }
         }
     }
-}
-
-.popup {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    backdrop-filter: blur(5px);
-    background-color: #29272f62;
-
-    p {
-        font-weight: 700;
-    }
-
-    span {
-        font-size: 12px;
-        font-style: italic;
-    }
-
-    .popup-content {
-        position: absolute;
-        background-color: #29272F;
-        background-image: url(/media/textures/grain-texture2.png);
-        background-repeat: repeat;
-        background-size: contain;
-        background-size: 100px; 
-        transform: translate(-50%);
-        left: 50%;
-        top: 40%;
-        padding: 40px;
-        border-radius: 10px;
-        text-align: center;
-        color: #F2F2F2;
-    }
-
-    .popup-buttons {
-        margin-top: 50px;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        gap: 100px;            
-
-        .confirm-yes {
-            background-color: #D6650F;
-            border: none;
-            padding: 10px;
-            border-radius: 5px;
-            font-size: 16px;
-            font-weight: 600;
-            color: #F2F2F2;
-
-            &:hover {
-                cursor: pointer;
-                transition: 0.2s;
-                background-color:#81AB76;
-                border-color: #81AB76;
-                color: #29272F;
-            }
-        }
-
-        .confirm-no {
-            background-color: #29272F;
-            border: solid 1.5px #F2F2F2;
-            padding: 10px;
-            border-radius: 5px;
-            font-size: 16px;
-            font-weight: 600;
-            color: #F2F2F2;
-
-            &:hover {
-                cursor: pointer;
-                transition: 0.2s;
-                background-color:#81AB76;
-                border-color: #81AB76;
-                color: #29272F;
-            }
-        }
-    }
-}
-
-.hidden {
-    display: none;
 }

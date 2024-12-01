@@ -131,6 +131,14 @@ ul {
     }
 
     .user-profile {
+
+        .active-profile {
+            background-color: #D6650F;
+            background-image: none;
+        }
+    }
+
+    .user-profile {
         display: flex;
 
         a {
@@ -161,11 +169,12 @@ ul {
                 height: 40px;
                 border-radius: 100px;
                 border: solid 1.5px #F2F2F2;
+                background-color: #29272F;
     
                 img {
                     height: 100%;
                     width: 100%;
-                    object-fit: contain;
+                    object-fit: cover;
                     border-radius: 100px;
                 }
             }
@@ -177,6 +186,7 @@ ul {
             }
         }
     }
+
 }
 
 
