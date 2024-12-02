@@ -224,7 +224,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function getPageRange(totalPages, currentPage) {
   const screenWidth = window.innerWidth;
-  const maxPagesToShow = screenWidth <= 500 ? 8 : 11;
+  let maxPagesToShow;
+
+  if (screenWidth <= 380) {
+    maxPagesToShow = 5;
+  } 
+  
+  else if (screenWidth <= 500) {
+    maxPagesToShow = 8;
+  } 
+  
+  else {
+    maxPagesToShow = 11;
+  }
 
   const range = [];
   let startPage = Math.max(1, currentPage - Math.floor(maxPagesToShow / 2));
