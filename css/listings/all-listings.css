@@ -463,13 +463,61 @@
     }
 }
 
-@media (max-width: 490px) {
+@media (max-width: 500px) {
+    .tag-section {  
+        flex-wrap: nowrap;
+        margin-bottom: 20px;
+        .popular-tags {
+            flex-wrap: wrap;
+            .tag {
+            }
+        }
+    }
+
     .all-listings {    
         .listing {
-            height: 355px;
+            width: calc(100% - 0px);
+            height: 505px;
+            .listing-content { 
+                .listing-details {
+                    height: 30%;
+                    margin-left:10px;
+                    margin-top: 0px;
+                    padding-top: 0px;
+                    overflow: hidden;
+                }
+                .listing-title {
+                    font-size: 18px;
+                }
+                .listing-description {
+                    font-size: 14px;              
+                }
+                .total-bids {
+                    font-size: 16px;
+                }
+            }
+            .see-listing {
+                i {
+                    font-size: 20px;
+                }
+            }
         }
     }
 }
+
+@media (max-width: 400px) {
+    .tag-section {
+        display: none;
+    }
+    .listings-top-filters {
+        flex-direction: column;
+    }
+    .all-listings {
+        gap: 10px;
+    }
+}
+
+
 
 
 

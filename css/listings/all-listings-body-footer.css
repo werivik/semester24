@@ -164,3 +164,9 @@ footer {
         }
     }
 }
+
+@media (max-width: 490px) {
+    main {
+        height: 250vh;
+    }
+}

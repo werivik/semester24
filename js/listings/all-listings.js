@@ -141,9 +141,11 @@ async function loadListings() {
 
     const tagCounts = {};
     listings.forEach((listing) => {
+      
       if (Array.isArray(listing.tags)) {
         listing.tags.forEach((tag) => {
           const trimmedTag = tag.trim();
+          
           if (trimmedTag) {
             tagCounts[trimmedTag] = (tagCounts[trimmedTag] || 0) + 1;
           }
@@ -221,9 +223,10 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function getPageRange(totalPages, currentPage) {
-  const range = [];
-  const maxPagesToShow = 11;
+  const screenWidth = window.innerWidth;
+  const maxPagesToShow = screenWidth <= 500 ? 8 : 11;
 
+  const range = [];
   let startPage = Math.max(1, currentPage - Math.floor(maxPagesToShow / 2));
   let endPage = Math.min(totalPages, startPage + maxPagesToShow - 1);
 
@@ -237,6 +240,7 @@ function getPageRange(totalPages, currentPage) {
 
   return range;
 }
+
 
 
 
