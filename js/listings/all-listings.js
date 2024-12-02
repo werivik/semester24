@@ -5,6 +5,11 @@ let sortBy = "newest";
 let currentPage = 1;
 let tagFilter = null;
 
+function getListingsPerPage() {
+  const screenWidth = window.innerWidth;
+  return screenWidth <= 1300 ? 4 : 9;
+}
+
 export async function fetchListings() {
   try {
     let url = `${API_LISTINGS}?_count=true`;
@@ -53,6 +58,7 @@ async function loadListings() {
     const listingsPerPage = getListingsPerPage();
 
     const sortedListings = [...listings].sort((a, b) => {
+      
       if (sortBy === "newest") {
         return new Date(b.created) - new Date(a.created);
       } 
@@ -60,7 +66,7 @@ async function loadListings() {
       else if (sortBy === "oldest") {
         return new Date(a.created) - new Date(b.created);
       }
-      
+
       return 0;
     });
 
@@ -135,11 +141,9 @@ async function loadListings() {
 
     const tagCounts = {};
     listings.forEach((listing) => {
-     
       if (Array.isArray(listing.tags)) {
         listing.tags.forEach((tag) => {
           const trimmedTag = tag.trim();
-          
           if (trimmedTag) {
             tagCounts[trimmedTag] = (tagCounts[trimmedTag] || 0) + 1;
           }
@@ -184,7 +188,6 @@ async function loadListings() {
     }
   }
 }
-
 
 document.getElementById("sort-by").addEventListener("change", (event) => {
   sortBy = event.target.value;
@@ -234,5 +237,8 @@ function getPageRange(totalPages, currentPage) {
 
   return range;
 }
+
+
+
 
 
