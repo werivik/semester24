@@ -16,107 +16,109 @@
     width: 300px;
     border-radius: 15px;
     color: #F2F2F2;
+}
 
-    h1 {}
+h1 {}
 
-    .profile-info-content {
+.profile-info-content {
 
-        padding: 10px;
+    padding: 10px;
+}
 
-        .profile-content {
+.profile-content {
 
-            .profile-info {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
+    .profile-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
-                .user-credit {
-                    margin-bottom: 10px;
-                    color: #D6650F;
-                    font-weight: 600;
-                }
+    .user-credit {
+        margin-bottom: 10px;
+        color: #D6650F;
+        font-weight: 600;
+    }
 
-                .avatar-container {
-                    width: 150px;
-                    height: 150px;
-                    border-radius: 999px;
-                    border: solid 1.5px #F2F2F2;
-                
-                    img {
-                        width: 150px;
-                        height: 150px;
-                        object-fit: cover;
-                        border-radius: 999px;
-                    }
-                }
+    .avatar-container {
+        width: 150px;
+        height: 150px;
+        border-radius: 999px;
+        border: solid 1.5px #F2F2F2;
+    
+        img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 999px;
+        }
+    }
 
-                .name-email-bio {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 20px;
-                    width: 100%;
-                    align-items: center;
+    .name-email-bio {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        align-items: center;
 
-                    .user-name{
-                        font-size: 20px;
-                        margin-top: 20px;
-                        text-align: center;
-                    }
-                    .user-email{
-                        font-size: 16px;
-                        opacity: 65%;
-                        text-align: center;
-                        margin-top: -20px;
-                    }
-                    .user-bio{
-                        margin-bottom: 80px;
-                        width: 85%;
-                    }
-                }
-            }
+        .user-name{
+            font-size: 20px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .user-email{
+            font-size: 16px;
+            opacity: 65%;
+            text-align: center;
+            margin-top: -20px;
+        }
+        .user-bio{
+            margin-bottom: 80px;
+            width: 85%;
+        }
+    }
 
-            .shortcut {
-                display: flex;
-                flex-direction: column;
-                color: #F2F2F2;
-                text-decoration: none;
-                margin-top: 20px;
-                font-size: 20px;
-                text-align: center;
-
-                &:hover{
-                    color: #81AB76;
-                    transition: 0.2s;
-                }
+    .shortcut-links{
+        display: flex;
+        flex-direction: column;
+        .shortcut {
+            color: #F2F2F2;
+            text-decoration: none;
+            margin-top: 20px;
+            font-size: 20px;
+            text-align: center;
+    
+            &:hover{
+                color: #81AB76;
+                transition: 0.2s;
             }
         }
+    }
+}
 
-        .logout-content {
-            position: relative;
-            width: 100%;
-            height: 20%;
-            .logout-button{
-                top: 100%;
-                position: absolute;
-                left: 50%;
-                transform: translate(-50%);
-                height: 30px;
-                width: 80px;
-                border: solid 1.5px #F2F2F2;
-                border-radius: 10px;
-                background-color: #29272F;
-                color: #F2F2F2;
-                font-family: "Libre Bodoni", serif;
-                font-weight: 600;
+.logout-content {
+    position: relative;
+    width: 100%;
+    height: 20%;
+    .logout-button{
+        top: 100%;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        height: 30px;
+        width: 80px;
+        border: solid 1.5px #F2F2F2;
+        border-radius: 10px;
+        background-color: #29272F;
+        color: #F2F2F2;
+        font-family: "Libre Bodoni", serif;
+        font-weight: 600;
 
-                &:hover {
-                    background-color: #D6650F;
-                    border-color: #D6650F;
-                    color:#29272F;
-                    transition: 0.2s;
-                    cursor: pointer;
-                }
-            }
+        &:hover {
+            background-color: #D6650F;
+            border-color: #D6650F;
+            color:#29272F;
+            transition: 0.2s;
+            cursor: pointer;
         }
     }
 }
@@ -129,213 +131,198 @@
     display: flex;
     flex-direction: column;
     gap: 160px;
+}
 
-    h2{
-        font-size: 35px;
-    }
+.credit-gift-section {
+    margin-bottom: 80px;
+    
+    .credit-gift-content {}
+}
 
-    .credit-gift-section {
-        margin-bottom: 80px;
-        
-        .credit-gift-content {}
-    }
+.users-listings-section {
+    width: 100%;
+    .user-listings-title {
 
-    .users-listings-section {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 80px;
 
-        width: 100%;
-
-        .user-listings-title {
+        h2{
+            font-size: 35px;
             display: flex;
-            flex-direction: row;
-            justify-content: space-between;
             align-items: center;
-            
-            .create-button {
-                height: 40px;
-                width: 160px;
-                background-color: #81AB76;
-                border-radius: 10px;
-                border: none;
-                color: #F2F2F2;
-                font-size: 18px;
-                font-family: "Libre Bodoni", serif;
+            justify-content: center;
+        }
+        
+        .create-button {
+            height: 40px;
+            width: 160px;
+            background-color: #81AB76;
+            border-radius: 10px;
+            border: none;
+            color: #F2F2F2;
+            font-size: 18px;
+            font-family: "Libre Bodoni", serif;
+            i {
+                margin-right: -10px;
+                opacity: 0;
+            }
+
+            &:hover {
+                cursor: pointer;
+                transition: 0.2s;
+                background-color: #D6650F;
+
                 i {
-                    margin-right: -10px;
-                    opacity: 0;
-                }
-
-                &:hover {
-                    cursor: pointer;
                     transition: 0.2s;
-                    background-color: #D6650F;
-
-                    i {
-                        transition: 0.2s;
-                        opacity: 1;
-                        margin-right: 5px;
-                    }
+                    opacity: 1;
+                    margin-right: 5px;
                 }
             }
         }
-
-        .all-users-listings {
-            margin-top: 40px;
-            .listings {
-                display: flex;
-                flex-direction: row;
-                align-items: flex-start;
-                justify-content: space-between;
-                flex-wrap: wrap;
-                width: 100%;
-
-                .listing {
-                    width: calc(45% - 20px);
-                    height: 550px;
-                    padding: 10px;
-                    background-color: #29272F;
-                    border-radius: 25px;
-                    color: #F2F2F2;
-                    text-decoration: none;
-                    position: relative;
-
-                    .listing-image {
-                        border-radius: 25px;
-                        height: 275px;
-
-                        img {
-                            width: 100%;
-                            height: 100%;
-                            border-radius: 25px;
-                            object-fit: cover;
-                        }
-                    }
-
-                    .listing-content {
-
-                        .title {
-
-                        }
-                        .description {
-                            height: 60px;
-                            overflow: hidden;
-                        }
-                        .lower-content {
-                            margin-top: 20px;
-                            font-size: 14px;
-                            .tags{
-                                opacity: 65%;
-                            }
-                            .bidding-end{}
-                            .total-bids{}
-                        }
-                    }
-
-                    .edit-buttons {
-                        position: absolute;
-                        height: 98%;
-                        width: 94.5%;
-                        top: 0;
-                        display: flex;
-                        flex-direction: row;
-                        align-items: end;
-                        justify-content: space-around;
-                        .edit-listing-button {
-                            background-color: #81AB76;
-                            border: none;
-                            border-radius: 10px;
-                            height: 30px;
-                            width: 75px;
-                            font-size: 14px;
-                            font-family: "Libre Bodoni", serif;
-                            &:hover {
-                                cursor: pointer;
-                                color: #F2F2F2;
-                                transition: 0.2s;
-                            }
-                        }
-                        .delete-listing-button {
-                            background-color: #D6650F;
-                            border: none;
-                            border-radius: 10px;
-                            height: 30px;
-                            width:75px;
-                            font-size: 14px;
-                            font-family: "Libre Bodoni", serif;
-                            &:hover {
-                                cursor: pointer;
-                                color: #F2F2F2;
-                                transition: 0.2s;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
     }
+}
 
-    .update-user-info {
-        height: 100%;
-        padding-bottom: 160px;
+.all-users-listings {
+    margin-top: 40px;
+    
+    .listings {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-wrap: wrap;
         width: 100%;
-        h2 {
-            margin-bottom: 80px;
-        }
 
-        .user-update-content {
-            display: flex;
-            flex-direction: column;
-            gap: 80px;
+        .listing {
+            width: calc(45% - 20px);
+            height: 550px;
+            padding: 10px;
             background-color: #29272F;
-            background-image: url(/media/textures/grain-texture2.png);
-            background-repeat: repeat;
-            background-size: contain;
-            background-size: 100px; 
-            padding: 20px;
             border-radius: 25px;
             color: #F2F2F2;
-        }
+            text-decoration: none;
+            position: relative;
 
-        .update-profile {
-            display: flex;
-            flex-direction: row;
-            gap: 40px;
-            margin-top: 80px;
-        }
+            .listing-image {
+                border-radius: 25px;
+                height: 275px;
 
-        .update-left {
-            display: flex;
-            flex-direction: column;
-            gap: 40px;
-            width: 50%;
-        }
-
-        .update-right {
-            width: 50%;
-
-            .update-bio {
-                width: 100%;
-                display: flex;
-                flex-direction: column;
-                gap: 20px;
-
-                label {
-                    font-size: 20px;
-                }
-
-                .bio-text {
+                img {
                     width: 100%;
                     height: 100%;
-                    min-height: 150px;
-                    color: #F2F2F2;
-                    border-radius: 15px;
-                    border: solid 1.5px #29272F;
+                    border-radius: 25px;
+                    object-fit: cover;
                 }
             }
-        } 
-    }
 
-    .update-avatar, .update-username {
+            .listing-content {
+
+                .title {
+
+                }
+                .description {
+                    height: 60px;
+                    overflow: hidden;
+                }
+                .lower-content {
+                    margin-top: 20px;
+                    font-size: 14px;
+                    .tags{
+                        opacity: 65%;
+                    }
+                    .bidding-end{}
+                    .total-bids{}
+                }
+            }
+
+            .edit-buttons {
+                position: absolute;
+                height: 98%;
+                width: 94.5%;
+                top: 0;
+                display: flex;
+                flex-direction: row;
+                align-items: end;
+                justify-content: space-around;
+                .edit-listing-button {
+                    background-color: #81AB76;
+                    border: none;
+                    border-radius: 10px;
+                    height: 30px;
+                    width: 75px;
+                    font-size: 14px;
+                    font-family: "Libre Bodoni", serif;
+                    &:hover {
+                        cursor: pointer;
+                        color: #F2F2F2;
+                        transition: 0.2s;
+                    }
+                }
+                .delete-listing-button {
+                    background-color: #D6650F;
+                    border: none;
+                    border-radius: 10px;
+                    height: 30px;
+                    width:75px;
+                    font-size: 14px;
+                    font-family: "Libre Bodoni", serif;
+                    &:hover {
+                        cursor: pointer;
+                        color: #F2F2F2;
+                        transition: 0.2s;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.update-user-info {
+    height: 100%;
+    padding-bottom: 160px;
+    width: 100%;
+    h2 {
+        margin-bottom: 80px;
+        font-size: 35px;
+    }
+}
+
+.user-update-content {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    background-color: #29272F;
+    background-image: url(/media/textures/grain-texture2.png);
+    background-repeat: repeat;
+    background-size: contain;
+    background-size: 100px; 
+    padding: 20px;
+    border-radius: 25px;
+    color: #F2F2F2;
+}
+
+.update-profile {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    margin-top: 80px;
+}
+
+.update-left {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 50%;
+}
+
+.update-right {
+    width: 50%;
+
+    .update-bio {
+        width: 100%;
         display: flex;
         flex-direction: column;
         gap: 20px;
@@ -344,33 +331,212 @@
             font-size: 20px;
         }
 
-        input {
-            height: 35px;
+        .bio-text {
+            width: 100%;
+            height: 100%;
+            min-height: 150px;
             color: #F2F2F2;
             border-radius: 15px;
             border: solid 1.5px #29272F;
         }
     }
+} 
 
-    .save-button-content {
-        width: 100%;
-        display: flex;
-        justify-content: end;
+.update-avatar, .update-username {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 
-        .save-button {
-            background-color: #81AB76;
-            height: 35px;
-            border-radius: 10px;
-            border: none;
-            color:#F2F2F2;
-            font-size: 16px;
-            font-family: "Libre Bodoni", serif;
+    label {
+        font-size: 20px;
+    }
 
-            &:hover {
-                background-color: #D6650F;
-                cursor: pointer;
-                transition: 0.2s;
+    input {
+        height: 35px;
+        color: #F2F2F2;
+        border-radius: 15px;
+        border: solid 1.5px #29272F;
+    }
+}
+
+.save-button-content {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+
+    .save-button {
+        background-color: #81AB76;
+        height: 35px;
+        border-radius: 10px;
+        border: none;
+        color:#F2F2F2;
+        font-size: 16px;
+        font-family: "Libre Bodoni", serif;
+
+        &:hover {
+            background-color: #D6650F;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+    }
+}
+
+@media (max-width: 990px) {
+    .right-side-sections {
+        margin-left: 40px;
+        gap: 100px;
+    }
+    .all-users-listings {
+        margin-top: 20px;
+        .listings {
+            .listing {
+                width: calc(49% - 20px);
             }
         }
     }
+    .update-profile {
+        flex-direction: column;
+        margin-top: 40px;
+    }
+    .update-left {
+        width: 75%;
+    }
+    .update-right {
+        width: 100%;
+    } 
+}
+
+@media (max-width: 800px) {
+    .margin-section {
+        flex-direction: column;
+        justify-content: space-evenly;
+    }  
+
+    .profile-info-section {
+        position: relative;
+        height: 475px;
+        width: 100%;
+        margin-bottom: 100px;
+    }
+    
+    .profile-content {
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-left: 5%;
+        margin-right: 5%;
+
+        .profile-info {
+            width: 50%;
+        }
+    
+        .avatar-container {
+            width: 150px;
+            height: 150px;
+            border-radius: 999px;
+            border: solid 1.5px #F2F2F2;
+        
+            img {
+                width: 150px;
+                height: 150px;
+                object-fit: cover;
+                border-radius: 999px;
+            }
+        }
+    
+        .name-email-bio {
+            .user-bio{
+                padding: 5px;
+                border-radius: 5px;
+                background-color: #f2f2f25e;
+            }
+        }
+    
+        .shortcut-links {
+            width: 50%;
+        }
+    }
+    
+    .logout-content {
+        width: 54%;
+        .logout-button{
+            position: relative;
+            top: 0;
+        }
+    }
+
+    .right-side-sections {
+        width: 100%;
+        margin-left: 0px;
+    }
+}
+
+@media (max-width: 550px) {
+    .all-users-listings {
+        margin-top: 40px;
+        
+        .listings {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            width: 100%;
+    
+            .listing {
+                width: 100%;
+                margin-bottom: 10px;
+                height: 550px;
+            }
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    .profile-content {
+        .profile-info {
+            width: 100%;
+        }
+        .shortcut-links {
+            display: none;
+        }
+    }
+    .logout-content {
+        width: 100%;
+    }
+    .users-listings-section {
+        width: 100%;
+        .user-listings-title {
+            h2{
+                font-size: 25px;
+            }
+            .create-button {
+                width: 120px;
+                font-size: 14px;
+            }
+        }
+    }
+    .update-user-info {
+        h2 {
+            font-size: 25px;
+        }
+    }
+}
+
+@media (max-width: 350px) {
+    .users-listings-section {
+        .user-listings-title {
+            flex-direction: column;
+            height: 100px;
+        }
+    }
+    .update-user-info {
+        width: 100%;
+        h2 {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+    }  
 }
