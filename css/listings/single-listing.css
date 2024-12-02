@@ -44,131 +44,243 @@
 
     padding-bottom: 0px;
     margin-bottom: 0px;
+}
 
-    .go-back-button {
+.go-back-button {
 
-        a {
-            border-radius: 10px;
-            padding: 5px;
+    a {
+        border-radius: 10px;
+        padding: 5px;
 
-            font-size: 14px;
+        font-size: 14px;
+        color: #F2F2F2;
+        background-color: #29272F;
+        width: 60px;
+        text-decoration: none;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+        i {
+            margin-right: 5px;
+            margin-left: 5px;
+            display: none;
+        }
+
+        &:hover {
+            background-color: #D6650F;
             color: #F2F2F2;
-            background-color: #29272F;
-            width: 60px;
-            text-decoration: none;
+            width: 80px;
+            transition: 0.2s;
+
+            i {
+                display: block;
+            }
+        }
+    }
+}
+
+.listing-detail {
+
+    h1 {
+        font-size: 35px;
+        margin-bottom: 40px;
+    }
+
+    .listings-tags {
+        margin-bottom: 40px;
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        width: 100%;
+
+        .tag {
+            height: 30px;
+            width: auto;
+            padding: 5px;
+            padding-left: 7px;
+            padding-right: 7px;
+            border: solid 1.5px #29272F;
+            border-radius: 15px;
             display: flex;
-            flex-direction: row;
             align-items: center;
             justify-content: center;
 
-            i {
-                margin-right: 5px;
-                margin-left: 5px;
-                display: none;
-            }
-
             &:hover {
+                cursor: pointer;
                 background-color: #D6650F;
                 color: #F2F2F2;
-                width: 80px;
+                border-color: #D6650F;
                 transition: 0.2s;
-
-                i {
-                    display: block;
-                }
             }
         }
     }
 
+    .listing-content {
+
+        .description {
+            margin-bottom: 120px;
+        }
+
+        .product-meta {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+
+    .listing-date-info {
+        margin-top: 60px;
+        .created-date, .updated-date {
+            font-size: 14px;
+            font-style: italic;
+        }
+    }
+
+}
+
+.place-bid-content {
+    input {
+        border: solid 1.5px #29272F;
+        border-radius: 10px;
+        height: 35px;
+        background-color: #f2f2f200;
+
+        &::placeholder{
+            color:#29272F;
+            opacity: 75%;
+            padding-left: 5px;
+            font-family: "Libre Bodoni", serif;
+        }
+    }
+
+    .place-bid {
+        background-color: #D6650F;
+        color: #F2F2F2;
+        height: 35px;
+        width: 55px;
+        margin-left: 10px;
+        border: none;
+        border-radius: 10px;
+        font-family: "Libre Bodoni", serif;
+
+        &:hover {
+            cursor: pointer;
+            background-color: #81AB76;
+            transition: 0.2s;
+        }
+    }
+}
+
+@media (max-width: 990px) {
+    .listing-left-side {
+        width: 35%;
+    }
+    
+    .listing-right-side {
+        width: 50%;
+        margin-left: 40px;
+    }
+}
+
+@media (max-width: 750px) {
+    .margin-section {
+        flex-direction: column;
+    }
+
+    .listing-left-side {
+        width: 90%;
+    }
+    
+    .listing-right-side {
+        width: 90%;
+        margin-left: 0px;
+        margin-top: 40px;
+    }
+}
+
+@media (max-width:500px) {
+    .listing-left-side {
+        height: 75%;
+    }   
+
     .listing-detail {
 
         h1 {
-            font-size: 35px;
-            margin-bottom: 40px;
+            font-size: 25px;
+            margin-top: 40px;
+            margin-bottom: 20px;
         }
-
+    
         .listings-tags {
-            margin-bottom: 40px;
-            display: flex;
-            flex-direction: row;
-            gap: 20px;
-            width: 100%;
-    
+            gap: 10px; 
             .tag {
-                height: 30px;
-                width: auto;
-                padding: 5px;
-                padding-left: 7px;
-                padding-right: 7px;
-                border: solid 1.5px #29272F;
-                border-radius: 15px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-    
-                &:hover {
-                    cursor: pointer;
-                    background-color: #D6650F;
-                    color: #F2F2F2;
-                    border-color: #D6650F;
-                    transition: 0.2s;
-                }
+                height: 20px;
             }
         }
-
         .listing-content {
-
+    
             .description {
-                margin-bottom: 120px;
+                margin-bottom: 60px;
             }
-
+    
             .product-meta {
                 display: flex;
                 flex-direction: column;
                 gap: 20px;
             }
         }
-
+    
         .listing-date-info {
-            margin-top: 60px;
-            .created-date, .updated-date {
+            margin-top: 40px;
+        }
+    
+    }
+}
+
+@media (max-width:350px) {
+    .listing-detail {
+        h1 {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        .listing-content {
+            .listings-tags {
+                margin-bottom: 20px; 
+            }
+            .description {
                 font-size: 14px;
-                font-style: italic;
             }
         }
-
     }
-
+    
     .place-bid-content {
         input {
-            border: solid 1.5px #29272F;
-            border-radius: 10px;
-            height: 35px;
-            background-color: #f2f2f200;
-
-            &::placeholder{
-                color:#29272F;
-                opacity: 75%;
-                padding-left: 5px;
-                font-family: "Libre Bodoni", serif;
-            }
+            height: 30px;
+            width: 140px;
         }
-
+    
         .place-bid {
-            background-color: #D6650F;
-            color: #F2F2F2;
-            height: 35px;
-            width: 55px;
-            margin-left: 10px;
-            border: none;
-            border-radius: 10px;
-            font-family: "Libre Bodoni", serif;
-
-            &:hover {
-                cursor: pointer;
-                background-color: #81AB76;
-                transition: 0.2s;
-            }
+            height: 30px;
         }
-    }
+    } 
+}
+
+
+@media (max-width:300px) {
+    
+    .place-bid-content {
+        input {
+            height: 30px;
+            width: 140px;
+        }
+    
+        .place-bid {
+            margin-top: 10px;
+            height: 30px;
+            width: 140px;
+            margin-left: 0px;
+        }
+    } 
 }
