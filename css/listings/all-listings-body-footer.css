@@ -96,6 +96,17 @@ footer {
 
 /*body, main and margin-section*/
 
+@media (max-width: 1600px) {
+    main {
+        padding-bottom: 90%;
+    }
+}
+
+@media (max-width: 1500px) {
+    main {
+        padding-bottom: 100%;
+    }
+}
 
 @media (max-width: 990px) {
     .margin-section {
@@ -109,9 +120,15 @@ footer {
         padding-bottom: 80%;
     }
 }
-@media (max-width: 490px) {
+@media (max-width: 500px) {
     main {
         height: 250vh;
+    }
+}
+
+@media (max-width: 400px) {
+    main {
+        padding-bottom: 110%;
     }
 }
 
@@ -147,7 +164,6 @@ footer {
         }
     }
 }
-
 @media screen and (max-width: 715px) {
     footer {
 
