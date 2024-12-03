@@ -16,6 +16,7 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    flex-direction: column;
 
     .questions {
         width: 35%;
@@ -79,6 +80,7 @@ footer {
     }
 }
 
+/*
 @media screen and (max-width: 960px) {
     footer {
 
@@ -130,3 +132,4 @@ footer {
         }
     }
 }
+*/

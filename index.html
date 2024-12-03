@@ -6,14 +6,14 @@
 
     <!--
     <link rel="stylesheet" href="/src/css/index.css">
-    <link rel="stylesheet" href="/src/css/head/nav.css">
-    <link rel="stylesheet" href="/src/css/footer.css">
     <link rel="stylesheet" href="/src/css/body.css">
     -->
 
     <link rel="stylesheet" href="/src/css/head/nav.css">
+    <link rel="stylesheet" href="/src/css/index.css">
     
     <link rel="stylesheet" href="/dist/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.0/dist/tailwind.min.css" rel="stylesheet">
 
     <script type="module" src="/js/auth/register.js" defer></script>
     <script type="module" src="/js/nav/account.js" defer></script>
@@ -29,7 +29,7 @@
 <script src="https://kit.fontawesome.com/2ef99fbf3a.js" crossorigin="anonymous">
 </script>
 
-<body class="bg-bodyBackground">
+<body class="bg-bodyBackground p-0 m-0 h-full overflow-x-hidden font-serif">
 
     <header class="bg-bodyBackground h-[80px] w-full fixed top-0 z-[999] border-b-[1.5px] border-darkGreyFont">
         <nav class="ml-[10%] mr-[10%] h-[80px]">
@@ -49,22 +49,22 @@
                     </label>
 
                     <div class="links2">
-                        <a href="../index.html" class="text-darkGreyFont text-base p-1.5 ">Home</a>
-                        <a href="/listings/all-listings.html" class="text-darkGreyFont text-base p-1.5">Listings</a>
-                        <a href="/error.html" class="text-darkGreyFont text-base p-1.5">About us</a>
-                        <a href="/error.html" class="text-darkGreyFont text-base p-1.5">Contact us</a>                        
+                        <a href="../index.html" class="text-darkGreyFont text-base p-1.5 font-serif">Home</a>
+                        <a href="/listings/all-listings.html" class="text-darkGreyFont text-base p-1.5 font-serif">Listings</a>
+                        <a href="/error.html" class="text-darkGreyFont text-base p-1.5 font-serif">About us</a>
+                        <a href="/error.html" class="text-darkGreyFont text-base p-1.5 font-serif">Contact us</a>                        
 
                         <div class="user-options2">
 
                             <div class="login-options2">
-                                <a href="/auth/login.html" class="option-login2">Login</a>
-                                <a href="/auth/register.html" class="option-register2">REGISTER</a>
+                                <a href="/auth/login.html" class="option-login2 font-serif">Login</a>
+                                <a href="/auth/register.html" class="option-register2 font-serif">REGISTER</a>
                             </div>
         
                             <div class="user-profile2 flex h-[60px]">
                                 <a href="/profile/profile.html" class="flex flex-row items-center bg-bodyBackground bg-[url('/media/textures/grain-texture2.png')] bg-repeat bg-contain px-2 py-1 rounded-2xl text-lightFont hover:bg-orange hover:bg-[none] hover:text-lightFont transition-all">
                                     <div class="credit-amount2 flex justify-center items-center mr-2 text-sm">
-                                        <p class="text-lightFont">$ 0 Credits</p>
+                                        <p class="text-lightFont font-serif">$ 0 Credits</p>
                                     </div>
                                     <div class="avatar2 w-[40px] h-[40px] rounded-full border-[1.5px] border-solid border-lightFont">
                                         <img src="/media/default-profile.jpg" alt="" class="w-[40px] h-[40px] object-cover rounded-full">
@@ -78,26 +78,26 @@
                 </div>
 
                 <div class="nav-links flex-row gap-2.5 items-center h-[80px]" id="navLinks">
-                    <a href="../index.html" class="active-link text-darkGreyFont text-base p-1.5 rounded-lg border border-darkGreyFont hover:border-[1.5px] hover:border-darkGreyFont hover:bg-darkGreyFont hover:bg-[url(/media/textures/grain-texture2.png)] hover:bg-repeat hover:bg-contain hover:bg-[length:100px] hover:text-lightFont">Home</a>
+                    <a href="../index.html" class="font-serif text-darkGreyFont text-base p-1.5 rounded-lg border border-darkGreyFont hover:border-[1.5px] hover:transition-all hover:border-darkGreyFont hover:bg-darkGreyFont hover:bg-[url(/media/textures/grain-texture2.png)] hover:bg-repeat hover:bg-contain hover:bg-[length:100px] hover:text-lightFont">Home</a>
                     <div class="w-2.5 h-2.5 bg-orange rounded-full"></div>
-                    <a href="/listings/all-listings.html" class="text-darkGreyFont text-base p-1.5 rounded-lg border border-transparent hover:border-darkGreyFont hover:bg-darkGreyFont hover:bg-[url(/media/textures/grain-texture2.png)] hover:bg-repeat hover:bg-contain hover:bg-[length:100px] hover:text-lightFont">Listings</a>
+                    <a href="/listings/all-listings.html" class="font-serif text-darkGreyFont text-base p-1.5 rounded-lg border border-transparent hover:transition-all hover:border-darkGreyFont hover:bg-darkGreyFont hover:bg-[url(/media/textures/grain-texture2.png)] hover:bg-repeat hover:bg-contain hover:bg-[length:100px] hover:text-lightFont">Listings</a>
                     <div class="w-2.5 h-2.5 bg-orange rounded-full"></div>
-                    <a href="/error.html" class="text-darkGreyFont text-base p-1.5 rounded-lg border border-transparent hover:border-darkGreyFont hover:bg-darkGreyFont hover:bg-[url(/media/textures/grain-texture2.png)] hover:bg-repeat hover:bg-contain hover:bg-[length:100px] hover:text-lightFont">About us</a>
+                    <a href="/error.html" class="font-serif text-darkGreyFont text-base p-1.5 rounded-lg border border-transparent hover:border-darkGreyFont hover:transition-all hover:bg-darkGreyFont hover:bg-[url(/media/textures/grain-texture2.png)] hover:bg-repeat hover:bg-contain hover:bg-[length:100px] hover:text-lightFont">About us</a>
                     <div class="w-2.5 h-2.5 bg-orange rounded-full"></div>
-                    <a href="/error.html" class="text-darkGreyFont text-base p-1.5 rounded-lg border border-transparent hover:border-darkGreyFont hover:bg-darkGreyFont hover:bg-[url(/media/textures/grain-texture2.png)] hover:bg-repeat hover:bg-contain hover:bg-[length:100px] hover:text-lightFont">Contact us</a>
+                    <a href="/error.html" class="font-serif text-darkGreyFont text-base p-1.5 rounded-lg border border-transparent hover:border-darkGreyFont hover:transition-all hover:bg-darkGreyFont hover:bg-[url(/media/textures/grain-texture2.png)] hover:bg-repeat hover:bg-contain hover:bg-[length:100px] hover:text-lightFont">Contact us</a>
                 </div>
 
                 <div class="user-options h-[100px] items-center">
 
                     <div class="login-options hidden flex flex-row items-center gap-5">
-                        <a href="/auth/login.html" class="option-login border border-bodyBackground rounded-lg px-2 py-1 text-bodyBackground hover:bg-green hover:text-lightFont hover:border-green transition-all">Login</a>
-                        <a href="/auth/register.html" class="option-register border border-lightFont rounded-lg px-4 py-2 text-lightFont bg-bodyBackground bg-[url('/media/textures/grain-texture2.png')] bg-repeat bg-contain hover:bg-orange hover:border-orange transition-all">REGISTER</a>
+                        <a href="/auth/login.html" class="option-login border border-bodyBackground rounded-lg px-2 py-1 text-bodyBackground hover:transition-all hover:bg-green hover:text-lightFont hover:border-green transition-all">Login</a>
+                        <a href="/auth/register.html" class="option-register border border-lightFont rounded-lg px-4 py-2 text-lightFont hover:transition-all bg-bodyBackground bg-[url('/media/textures/grain-texture2.png')] bg-repeat bg-contain hover:bg-orange hover:border-orange transition-all">REGISTER</a>
                     </div>
 
                     <div class="user-profile flex h-[60px]">
                         <a href="/profile/profile.html" class="flex flex-row items-center bg-bodyBackground bg-[url('/media/textures/grain-texture2.png')] bg-repeat bg-contain px-2 py-1 rounded-2xl text-lightFont hover:bg-orange hover:bg-[none] hover:text-lightFont transition-all">
-                            <div class="credit-amount flex justify-center items-center mr-2 text-sm">
-                                <p>$ 0 Credits</p>
+                            <div class="credit-amount font-serif flex justify-center items-center mr-2 text-sm">
+                                <p class="font-serif">$ 0 Credits</p>
                             </div>
                             <div class="avatar w-[40px] h-[40px] rounded-full border-[1.5px] border-solid border-lightFont">
                                 <img src="/media/default-profile.jpg" alt="" class="w-[40px] h-[40px] object-cover rounded-full">
@@ -111,84 +111,86 @@
         </nav>
     </header>
 
-    <main>
-        <div class="margin-section">
-            <section class="top-section">
+    <main class="min-h-screen mb-auto">
+        <div class="ml-[10%] mr-[10%] pt-[160px] lPaddingUp">
+            <section class="h-[680px] w-full flex items-center justify-center">
 
-                <div class="top-section-border">
+                <div class="top-section-border bg-[#29272F] bg-[url('/media/textures/grain-texture2.png')] bg-repeat bg-contain bg-[length:100px] rounded-[25px] h-full w-full flex items-center justify-center p-[40px]">
     
-                    <div class="top-border-content">
+                    <div class="top-border-content w-full h-full relative flex flex-row justify-between w-[100%]">
     
-                        <div class="content-image">
-                            <img src="/media/auction.jpeg" alt="">
+                        <div class="content-image absolute z-10 w-full h-full rounded-[25px] opacity-50">
+                            <img src="/media/auction.jpeg" alt="" class="w-full h-full object-cover rounded-[25px] blur-[10px]"/>
                         </div>
     
-                        <div class="top-section-content-left">
-                            
-                            <div class="content-image-dividers">
-                                <div class="content-left">
-                                    <div class="left-titles">
-                                        <h2 class="title-1">Bidding</h2>
-                                        <h2 class="title-2">Safely</h2>
-                                        <h2 class="title-3">& Effectivly</h2>
+                        <div class="top-section-content-left z-20 h-full flex pl-[40px] items-center w-[55%]">  
+                            <div class="content-left w-[100%]">
+                                    <div class="left-titles lightFont">
+                                        <h2 class="text-[65px] text-lightFont">Bidding</h2>
+                                        <h2 class="text-[65px] text-specialOrange">Safely</h2>
+                                        <h2 class="text-[65px] text-lightFont">& Effectively</h2>
                                     </div>
                              </div>
-    
-                        </div>
-    
-                        </div>
-    
-                        <div class="top-section-content-right">
-                            <div class="content-right">
-                                <div class="right-titles">
-                                    <h3>Create an Account Today!</h3>
-                                    <h4>All New Accounts get 1000 Credits</h4>
-                                </div>
-                                <form id="registerForm" class="register-form">
-                                    <div class="registration-username">
-                                        <input type="text" id="name" name="name" required placeholder="Username"/>
-                                    </div>
-                    
-                                    <div class="registration-email">
-                                        <input type="email" id="email" name="email" required placeholder="Email"/>
-                                    </div>
-                    
-                                    <div class="registration-password">
-                                        <input type="password" id="password" name="password" required placeholder="Password"/>
-                                    </div>
-                                </form>
-                            </div>
-                            
-                            <button type="submit" class="register-button">
-                                REGISTER
-                            </button>
                         </div>
     
                     </div>
+
+                    <div class="top-section-content-right z-20 p-10 w-[60%]">
+                        <div class="content-right z-30 bg-[#F2F2F2] bg-[url('/media/textures/grain-texture-light.png')] bg-repeat bg-contain bg-[length:100px] p-5 rounded-tl-[25px] rounded-tr-[25px] rounded-br-[25px] rounded-bl-[0px] w-[100%] h-[439px] relative">
+                            <div class="top-section-content-right z-20 p-10 flex flex-col items-center justify-center text-center">
+                                <h3 class="text-font3">Create an Account Today!</h3>
+                                <h4 class="text-font4">All New Accounts get 1000 Credits</h4>
+                            </div>
+                            <form id="registerForm" class="w-full h-[50%] flex flex-col items-center justify-center gap-7">
+                                <div class="w-[300px] h-[38px] rounded-full">
+                                    <input type="text" id="name" name="name" required placeholder="Username" class="w-full h-full rounded-full border-2 border-[#29272F] bg-white pl-2 focus:outline-none focus:border-[#29272F]" />
+                                </div>
+                            
+                                <div class="w-[300px] h-[38px] rounded-full">
+                                    <input type="email" id="email" name="email" required placeholder="Email" class="w-full h-full rounded-full border-2 border-[#29272F] bg-white pl-2 focus:outline-none focus:border-[#29272F]" />
+                                </div>
+                            
+                                <div class="w-[300px] h-[38px] rounded-full">
+                                    <input type="password" id="password" name="password" required placeholder="Password" class="w-full h-full rounded-full border-2 border-[#29272F] bg-white pl-2 focus:outline-none focus:border-[#29272F]" />
+                                </div>
+                            </form>                            
+                        </div>
+                        
+                        <button type="submit" class="bg-[#D6650F] mt-[2.5%] w-[45%] h-[74px] border-0 rounded-[0px_25px_25px_25px] text-[18px] font-semibold text-[#29272F] hover:transition-all hover:duration-200 hover:ml-[15%] hover:bg-[#81AB76] hover:text-[#F2F2F2] cursor-pointer">
+                            REGISTER
+                        </button>                                             
+                        
+                    </div>
     
                 </div>
+
             </section>
     
-            <section class="middle-section">
+            <section class="middle-section h-screen mt-[160px]">
     
-                <div class="middle-section-title">
-                    <h2>Featured Listings</h2>
-
-                    <div class="see-more-link">
-                    <a href="/listings/all-listings.html">See More <i class="fa-solid fa-arrow-right"></i></a>
+                <div class="middle-section-title flex flex-row items-center justify-between">
+                    <h2 class="text-[35px] text-[#29272F]">Featured Listings</h2>
+                    <div class="border-[1.5px] border-[#29272F] w-[120px] h-[40px] flex flex-row justify-center items-center text-[18px] rounded-[15px]">
+                        <a href="/listings/all-listings.html" class="text-[#29272F] no-underline inline-flex items-center justify-center gap-[10px]">
+                            See More <i class="fa-solid fa-arrow-right hidden"></i>
+                        </a>                                    
                     </div>
-
                 </div>
     
-                <div class="listing-section">
+                <div class="listing-section h-[600px] relative mb-0 pb-0">
     
-                    <div class="newest-listings">
+                    <div class="newest-listings flex flex-row justify-evenly mx-[80px] mt-[40px]">
                     </div>
     
-                    <div class="slider-buttons-content">
-                        <div class="slider-buttons">
-                            <button class="next-left"><i class="fa-solid fa-arrow-left"></i></button>
-                            <button class="next-right"><i class="fa-solid fa-arrow-right"></i></button>
+                    <div class="slider-buttons-content absolute top-0 h-[540px] w-full">
+                        <div class="slider-buttons h-full w-full flex flex-row justify-between items-center">
+                            <button class="next-left bg-[#D6650F] font-semibold text-[#F2F2F2] rounded-[25px] h-[40px] w-[60px] border-0 hover:ml-[-10px] hover:bg-[#29272F] hover:cursor-pointer transition-all duration-200">
+                                <i class="fa-solid fa-arrow-left"></i>
+                              </button>
+                              
+                              <button class="next-right bg-[#D6650F] font-semibold text-[#F2F2F2] rounded-[25px] h-[40px] w-[60px] border-0 hover:mr-[-10px] hover:bg-[#29272F] hover:cursor-pointer transition-all duration-200">
+                                <i class="fa-solid fa-arrow-right"></i>
+                              </button>                                                         
                         </div>
                     </div>
 
@@ -198,41 +200,57 @@
         </div>
     </main>
 
-    <footer>
-        <div class="questions">
-            <h3>Have Any Questions?</h3>
-            <p>With us you can both buy and sell various products, from cellphones to cars! You must be a registered user to be able to sell and buy, and for first time users you get 1000 Credits to use!</p>
-            <p>Contact Us on this Phone Number or Email address, or fill out a contact form in our Contact Us Page.</p>
-            <div class="questions-contacts">
-                <span><i class="fa-solid fa-phone"></i>1234-567-8910</span>
-                <span><i class="fa-solid fa-envelope"></i>vikweronika@gmail.com</span>
+    <footer class="bg-darkGreyFont bg-[url('/media/textures/grain-texture2.png')] bg-repeat bg-contain bg-[length:100px] pt-20 pb-20 px-5 h-auto w-full text-lightFont static bottom-0">
+        <div class="flex flex-row justify-between ml-[10%] mr-[10%] w-[80%] relative">
+            <div class="w-[45%] h-auto mb-5">
+                <h3 class="text-font3 font-bold">Have Any Questions?</h3>
+                <p class="text-[17px] mt-5">
+                    With us you can both buy and sell various products, from cellphones to cars! You must be a registered user to be able to sell and buy, and for first-time users, you get 1000 Credits to use!
+                </p>
+                <p class="text-[17px] mt-3 mb-[50px]">
+                    Contact Us on this Phone Number or Email address, or fill out a contact form in our Contact Us Page.
+                </p>
+                <div class="questions-contacts mt-[50px] flex flex-col gap-[20px]">
+                    <span class="flex items-center"><i class="fa-solid fa-phone mr-[10px]"></i>1234-567-8910</span>
+                    <span class="flex items-center"><i class="fa-solid fa-envelope mr-[10px]"></i>vikweronika@gmail.com</span>
+                </div>
             </div>
-        </div>
-        <div class="footer-links">
-            <div class="about">
-                <h4><a href="/error.html" class="footer-links-title">About</a></h4>
-                <a href="/error.html">Our Mission</a>
-                <a href="/error.html">Our Team</a>
-                <a href="/error.html">History</a>
-                <a href="/error.html">Careers</a>
-                <a href="/error.html">FAQs</a>
+           
+            <div class="w-[45%] flex flex-row justify-evenly mb-5">
+                <div class="about flex flex-col gap-[10px]">
+                    <h4>
+                        <a href="/error.html" class="footer-links-title text-[25px] hover:text-green transition duration-200">About</a>
+                    </h4>
+                    <a href="/error.html" class="text-lightFont text-[20px] hover:text-orange transition duration-200">Our Mission</a>
+                    <a href="/error.html" class="text-lightFont text-[20px] hover:text-orange transition duration-200">Our Team</a>
+                    <a href="/error.html" class="text-lightFont text-[20px] hover:text-orange transition duration-200">History</a>
+                    <a href="/error.html" class="text-lightFont text-[20px] hover:text-orange transition duration-200">Careers</a>
+                    <a href="/error.html" class="text-lightFont text-[20px] hover:text-orange transition duration-200">FAQs</a>
+                </div>
+            
+                <div class="services flex flex-col gap-[10px]">
+                    <h4>
+                        <a href="/error.html" class="footer-links-title text-[25px] hover:text-green transition duration-200">Services</a>
+                    </h4>
+                    <a href="/error.html" class="text-lightFont text-[20px] hover:text-orange transition duration-200">Buy</a>
+                    <a href="/error.html" class="text-lightFont text-[20px] hover:text-orange transition duration-200">Sell</a>
+                    <a href="/error.html" class="text-lightFont text-[20px] hover:text-orange transition duration-200">Credit</a>
+                    <a href="/error.html" class="text-lightFont text-[20px] hover:text-orange transition duration-200">FAQs</a>
+                </div>
+            
+                <div class="contact flex flex-col gap-[10px]">
+                    <h4>
+                        <a href="/error.html" class="footer-links-title text-[25px] hover:text-green transition duration-200">Contact</a>
+                    </h4>
+                    <a href="/error.html" class="text-lightFont text-[20px] hover:text-orange transition duration-200">Phone</a>
+                    <a href="/error.html" class="text-lightFont text-[20px] hover:text-orange transition duration-200">Email</a>
+                    <a href="/error.html" class="text-lightFont text-[20px] hover:text-orange transition duration-200">Socials</a>
+                </div>
             </div>
-            <div class="services">
-                <h4><a href="/error.html" class="footer-links-title">Services</a></h4>
-                <a href="/error.html">Buy</a>
-                <a href="/error.html">Sell</a>
-                <a href="/error.html">Credit</a>
-                <a href="/error.html">FAQs</a>    
-            </div>
-            <div class="contact">
-                <h4><a href="/error.html" class="footer-links-title">Contact</a></h4>
-                <a href="/error.html">Phone</a>
-                <a href="/error.html">Email</a>
-                <a href="/error.html">Socials</a>
-            </div>
+
         </div>
     </footer>
-
+    
 </body>
 
 </html>

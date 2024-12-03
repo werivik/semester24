@@ -1,13 +1,16 @@
 body {
     padding: 0;
     margin: 0;
+    height: 100%;
     overflow-x: hidden;
     background-color: #EBEEE9;
     font-family: "Libre Bodoni", serif;
+    position: relative;
 }
 
 main {
     width: 100%;
+    height: 100%;
     position: relative;
 }
 
