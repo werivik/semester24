@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
+<<<<<<< Updated upstream
     // HTML files in various folders
     './index.html',
     './listings/**/*.html',
@@ -15,6 +16,14 @@ module.exports = {
     './src/**/*.scss',
     './src/**/*.css',
     './src/css/**/*.css',
+=======
+    './**/*.html',
+    './**/*.css',
+    './src/**/*.html',
+    './js/**/*.js',
+    './src/js/**/*.js',
+    './src/**/*.css',
+>>>>>>> Stashed changes
   ],
   safelist: [
     "text-font1",
@@ -34,6 +43,7 @@ module.exports = {
         'grain-texture': "url('/media/textures/grain-texture2.png')",
       },
       fontFamily: {
+<<<<<<< Updated upstream
         serif: ['"Libre Bodoni"', 'serif'],
       },
       fontSize: {
@@ -52,9 +62,18 @@ module.exports = {
         mPaddingDown: "40px",
         lPaddingDown: "80px",
         xlPaddingDown: "160px",
+=======
+        serif:["Libre Bodoni"]
+      },
+      borderWidth: {
+        '1.5px':'1.5px',
+>>>>>>> Stashed changes
       }
     },
   },
   plugins: [],
+  corePlugins: {
+    margin: true,
+  }
 }
 

@@ -6,6 +6,7 @@
 
     <!--
     <link rel="stylesheet" href="/src/css/index.css">
+<<<<<<< Updated upstream
     <link rel="stylesheet" href="/src/css/body.css">
     -->
 
@@ -14,6 +15,14 @@
     
     <link rel="stylesheet" href="/dist/style.css">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.0/dist/tailwind.min.css" rel="stylesheet">
+=======
+    <link rel="stylesheet" href="/src/css/footer.css">
+    <link rel="stylesheet" href="/src/css/body.css">
+    -->
+    
+    <link rel="stylesheet" href="/dist/output.css">
+    <link rel="stylesheet" href="/style.css">
+>>>>>>> Stashed changes
 
     <script type="module" src="/js/auth/register.js" defer></script>
     <script type="module" src="/js/nav/account.js" defer></script>
@@ -31,22 +40,34 @@
 
 <body class="bg-bodyBackground p-0 m-0 h-full overflow-x-hidden font-serif">
 
+<<<<<<< Updated upstream
     <header class="bg-bodyBackground h-[80px] w-full fixed top-0 z-[999] border-b-[1.5px] border-darkGreyFont">
         <nav class="ml-[10%] mr-[10%] h-[80px]">
             <ul class="h-[80px] flex flex-row justify-between items-center">
                 <div class="h-[80px] w-[80px] flex justify-center items-center">
                     <a href="../index.html" class="no-underline">
                         <img src="/media/logos/logo-dark.png" alt="Logo" class="h-[75px] w-[75px] object-contain">
+=======
+    <header class="w-full h-90 bg-[#EBEEE9] fixed top-0 z-[999] font-serif">
+        <nav class="ml-[10%] mr-[10%] h-90 -mt-4">
+            <ul class="h-90 flex justify-between items-center">
+                <!-- Logo -->
+                <div class="h-full w-20 flex items-center justify-center relative -ml-10">
+                    <a href="../index.html" class="h-80 w-20 flex items-center justify-center">
+                        <img src="/media/logos/logo-dark.png" alt="The AUCTi logo, a moneybag and a gavel on top of the company's name" class="h-[30px] w-[30px] object-contain">
+>>>>>>> Stashed changes
                     </a>
                 </div>
-
-                <div class="responsive-menu">
-                    <input type="checkbox" id="menuToggle" class="menu-toggle">
-                    <label for="menuToggle" class="hamburger-menu">
-                        <div class="hamburger-line"></div>
-                        <div class="hamburger-line"></div>
-                        <div class="hamburger-line"></div>
+    
+                <!-- Responsive Menu -->
+                <div class="relative hidden md:block">
+                    <input type="checkbox" id="menuToggle" class="opacity-0 menu-toggle">
+                    <label for="menuToggle" class="absolute top-0 left-0 flex flex-col gap-1 cursor-pointer z-[999]">
+                        <div class="w-8 h-1.5 bg-[#29272F] rounded-full"></div>
+                        <div class="w-8 h-1.5 bg-[#29272F] rounded-full"></div>
+                        <div class="w-8 h-1.5 bg-[#29272F] rounded-full"></div>
                     </label>
+<<<<<<< Updated upstream
 
                     <div class="links2">
                         <a href="../index.html" class="text-darkGreyFont text-base p-1.5 font-serif">Home</a>
@@ -65,17 +86,40 @@
                                 <a href="/profile/profile.html" class="flex flex-row items-center bg-bodyBackground bg-[url('/media/textures/grain-texture2.png')] bg-repeat bg-contain px-2 py-1 rounded-2xl text-lightFont hover:bg-orange hover:bg-[none] hover:text-lightFont transition-all">
                                     <div class="credit-amount2 flex justify-center items-center mr-2 text-sm">
                                         <p class="text-lightFont font-serif">$ 0 Credits</p>
+=======
+    
+                    <div class="hidden flex-col absolute w-[250px] h-[200px] rounded-b-3xl border border-[#29272F] bg-[#F4F3E5] p-5 gap-5 top-[50px] left-1/2 transform -translate-x-1/2 links2">
+                        <a href="../index.html" class="no-underline text-[#29272F] text-sm px-2 py-1 rounded-lg border border-transparent hover:border-[#29272F] hover:bg-[#29272F] hover:text-[#F2F2F2] transition">Home</a>
+                        <a href="/listings/all-listings.html" class="no-underline text-[#29272F] text-sm px-2 py-1 rounded-lg border border-transparent hover:border-[#29272F] hover:bg-[#29272F] hover:text-[#F2F2F2] transition">Listings</a>
+                        <a href="" class="no-underline text-[#29272F] text-sm px-2 py-1 rounded-lg border border-transparent hover:border-[#29272F] hover:bg-[#29272F] hover:text-[#F2F2F2] transition">About us</a>
+                        <a href="" class="no-underline text-[#29272F] text-sm px-2 py-1 rounded-lg border border-transparent hover:border-[#29272F] hover:bg-[#29272F] hover:text-[#F2F2F2] transition">Contact us</a>
+    
+                        <!-- User Options -->
+                        <div class="flex flex-col">
+                            <!-- Login Options -->
+                            <div class="flex gap-2 login-options2">
+                                <a href="/auth/login.html" class="px-2 py-1 border border-[#29272F] rounded-lg text-[#29272F] hover:bg-[#81AB76] hover:text-[#F2F2F2] transition duration-200">Login</a>
+                                <a href="/auth/register.html" class="px-2 py-1 rounded-lg text-xs text-[#F2F2F2] bg-[#29272F] bg-cover hover:bg-[#D6650F] transition duration-200">REGISTER</a>
+                            </div>
+                            
+                            <div class="hidden mt-[-10px] user-profile2">
+                                <a href="/profile/profile.html" class="no-underline flex items-center bg-[#29272F] bg-cover text-[#F2F2F2] px-2.5 py-1 rounded-full hover:bg-[#D6650F] transition duration-200">
+                                    <div class="w-10 h-10 rounded-full border-2 border-[#F2F2F2]">
+                                        <img src="/media/default-profile.jpg" alt="" class="w-full h-full object-cover rounded-full w-8 h-8">
+                                    </div>
+                                    <div class="text-sm ml-2.5">
+                                        <p>$ 0 Credits</p>
+>>>>>>> Stashed changes
                                     </div>
                                     <div class="avatar2 w-[40px] h-[40px] rounded-full border-[1.5px] border-solid border-lightFont">
                                         <img src="/media/default-profile.jpg" alt="" class="w-[40px] h-[40px] object-cover rounded-full">
                                     </div>                            
                                 </a>
                             </div>
-        
                         </div>
                     </div>
-
                 </div>
+<<<<<<< Updated upstream
 
                 <div class="nav-links flex-row gap-2.5 items-center h-[80px]" id="navLinks">
                     <a href="../index.html" class="font-serif text-darkGreyFont text-base p-1.5 rounded-lg border border-darkGreyFont hover:border-[1.5px] hover:transition-all hover:border-darkGreyFont hover:bg-darkGreyFont hover:bg-[url(/media/textures/grain-texture2.png)] hover:bg-repeat hover:bg-contain hover:bg-[length:100px] hover:text-lightFont">Home</a>
@@ -98,15 +142,41 @@
                         <a href="/profile/profile.html" class="flex flex-row items-center bg-bodyBackground bg-[url('/media/textures/grain-texture2.png')] bg-repeat bg-contain px-2 py-1 rounded-2xl text-lightFont hover:bg-orange hover:bg-[none] hover:text-lightFont transition-all">
                             <div class="credit-amount font-serif flex justify-center items-center mr-2 text-sm">
                                 <p class="font-serif">$ 0 Credits</p>
+=======
+    
+                <!-- Main Navigation Links -->
+                <div class="hidden md:flex gap-2 items-center links">
+                    <a href="../index.html" class="no-underline text-[#29272F] text-sm px-2 py-1 rounded-lg border border-transparent hover:border-[#29272F] hover:bg-[#29272F] hover:text-[#F2F2F2] transition">Home</a>
+                    <div class="w-2.5 h-2.5 bg-[#D6650F] rounded-full"></div>
+                    <a href="/listings/all-listings.html" class="no-underline text-[#29272F] text-sm px-2 py-1 rounded-lg border border-transparent hover:border-[#29272F] hover:bg-[#29272F] hover:text-[#F2F2F2] transition">Listings</a>
+                    <div class="w-2.5 h-2.5 bg-[#D6650F] rounded-full"></div>
+                    <a href="" class="no-underline text-[#29272F] text-sm px-2 py-1 rounded-lg border border-transparent hover:border-[#29272F] hover:bg-[#29272F] hover:text-[#F2F2F2] transition">About us</a>
+                    <div class="w-2.5 h-2.5 bg-[#D6650F] rounded-full"></div>
+                    <a href="" class="no-underline text-[#29272F] text-sm px-2 py-1 rounded-lg border border-transparent hover:border-[#29272F] hover:bg-[#29272F] hover:text-[#F2F2F2] transition">Contact us</a>
+                </div>
+    
+                <!-- User Options -->
+                <div class="hidden md:flex gap-5">
+                    <!-- Login Options -->
+                    <div class="hidden md:flex gap-2 login-options">
+                        <a href="/auth/login.html" class="px-2 py-1 border border-[#29272F] rounded-lg text-[#29272F] hover:bg-[#81AB76] hover:text-[#F2F2F2] transition duration-200">Login</a>
+                        <a href="/auth/register.html" class="px-2 py-1 border border-[#29272F] rounded-lg text-[#F2F2F2] bg-[#29272F] bg-cover hover:bg-[#D6650F] transition duration-200">REGISTER</a>
+                    </div>
+                    
+                    <!-- User Profile -->
+                    <div class="hidden md:flex user-profile">
+                        <a href="/profile/profile.html" class="no-underline flex items-center bg-[#29272F] bg-cover text-[#F2F2F2] px-2.5 py-1 rounded-full hover:bg-[#D6650F] transition duration-200">
+                            <div class="text-sm mr-2">$ 0 Credits</div>
+                            <div class="w-10 h-10 rounded-full border-2 border-[#F2F2F2]">
+                                <img src="/media/default-profile.jpg" alt="" class="w-full h-full object-cover rounded-full w-8 h-8">
+>>>>>>> Stashed changes
                             </div>
                             <div class="avatar w-[40px] h-[40px] rounded-full border-[1.5px] border-solid border-lightFont">
                                 <img src="/media/default-profile.jpg" alt="" class="w-[40px] h-[40px] object-cover rounded-full rounded-full border-[1.5px] border-solid border-lightFont">
                             </div>                            
                         </a>
                     </div>
-
                 </div>
-
             </ul>
         </nav>
     </header>

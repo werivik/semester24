@@ -14,19 +14,33 @@ const avatarImg2 = document.querySelector('.avatar2 img');
 const token = localStorage.getItem('accessToken') || sessionStorage.getItem('accessToken');
 
 function checkLoginStatus() {
-    if (token) {
-        loginOptions.style.display = 'none';
-        userProfile.style.display = 'flex';
-        loginOptions2.style.display = 'none';
-        userProfile2.style.display = 'flex';
-        fetchUserData();
+    if (loginOptions && loginOptions2 && userProfile && userProfile2) {
+        if (token) {
+            loginOptions.classList.add('hidden');
+            loginOptions.classList.remove('flex');
+            loginOptions2.classList.add('hidden');
+            loginOptions2.classList.remove('flex');
+            userProfile.classList.add('flex');
+            userProfile.classList.remove('hidden');
+            userProfile2.classList.add('flex');
+            userProfile2.classList.remove('hidden');
+            fetchUserData();
+        } 
+        
+        else {
+            loginOptions.classList.remove('hidden');
+            loginOptions.classList.add('flex');
+            loginOptions2.classList.remove('hidden');
+            loginOptions2.classList.add('flex');
+            userProfile.classList.add('hidden');
+            userProfile.classList.remove('flex');
+            userProfile2.classList.add('hidden');
+            userProfile2.classList.remove('flex');
+        }
     } 
     
     else {
-        loginOptions.style.display = 'flex';
-        userProfile.style.display = 'none';
-        loginOptions2.style.display = 'flex';
-        userProfile2.style.display = 'none';
+        console.error('One or more required elements are missing in the DOM.');
     }
 }
 
@@ -49,27 +63,46 @@ async function fetchUserData() {
         const credits = data.data.credits || 0;
         const avatar = data.data.avatar?.url;
 
-        creditAmount.textContent = `$ ${credits} Credits`;
-        creditAmount2.textContent = `$ ${credits} Credits`;
+        if (creditAmount) {
+            creditAmount.textContent = `$ ${credits} Credits`;
+        }
+
+        if (creditAmount2) {
+            creditAmount2.textContent = `$ ${credits} Credits`;
+        }
 
         if (avatar) {
-            avatarImg.src = avatar;
-            avatarImg.alt = 'User Avatar';
-            avatarImg2.src = avatar;
-            avatarImg2.alt = 'User Avatar';
+            if (avatarImg) {
+                avatarImg.src = avatar;
+                avatarImg.alt = 'User Avatar';
+            }
+            if (avatarImg2) {
+                avatarImg2.src = avatar;
+                avatarImg2.alt = 'User Avatar';
+            }
         } 
         
         else {
-            avatarImg.src = '/media/default-profile.jpg';
-            avatarImg.alt = 'Default Avatar';
-            avatarImg2.src = '/media/default-profile.jpg';
-            avatarImg2.alt = 'Default Avatar';
+            if (avatarImg) {
+                avatarImg.src = '/media/default-profile.jpg';
+                avatarImg.alt = 'Default Avatar';
+            }
+            if (avatarImg2) {
+                avatarImg2.src = '/media/default-profile.jpg';
+                avatarImg2.alt = 'Default Avatar';
+            }
         }
     } 
     
     catch (error) {
-        console.error('Error Fetching user data:', error);
-        creditAmount.textContent = '$ 0 Credits';
+        console.error('Error fetching user data:', error);
+
+        if (creditAmount) {
+            creditAmount.textContent = '$ 0 Credits';
+        }
+        if (creditAmount2) {
+            creditAmount2.textContent = '$ 0 Credits';
+        }
     }
 }
 
