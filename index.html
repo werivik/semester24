@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="/src/css/footer.css">
     <link rel="stylesheet" href="/src/css/body.css">
     -->
+
+    <link rel="stylesheet" href="/src/css/head/nav.css">
     
     <link rel="stylesheet" href="/dist/style.css">
 
@@ -47,10 +49,10 @@
                     </label>
 
                     <div class="links2">
-                        <a href="../index.html"  class="active-link">Home</a>
-                        <a href="/listings/all-listings.html">Listings</a>
-                        <a href="/error.html">About us</a>
-                        <a href="/error.html">Contact us</a>
+                        <a href="../index.html" class="text-darkGreyFont text-base p-1.5 ">Home</a>
+                        <a href="/listings/all-listings.html" class="text-darkGreyFont text-base p-1.5">Listings</a>
+                        <a href="/error.html" class="text-darkGreyFont text-base p-1.5">About us</a>
+                        <a href="/error.html" class="text-darkGreyFont text-base p-1.5">Contact us</a>                        
 
                         <div class="user-options2">
 
@@ -59,14 +61,14 @@
                                 <a href="/auth/register.html" class="option-register2">REGISTER</a>
                             </div>
         
-                            <div class="user-profile2">
-                                <a href="/profile/profile.html">
-                                    <div class="avatar2">
-                                        <img src="/media/default-profile.jpg" alt="">
+                            <div class="user-profile2 flex h-[60px]">
+                                <a href="/profile/profile.html" class="flex flex-row items-center bg-bodyBackground bg-[url('/media/textures/grain-texture2.png')] bg-repeat bg-contain px-2 py-1 rounded-2xl text-lightFont hover:bg-orange hover:bg-[none] hover:text-lightFont transition-all">
+                                    <div class="credit-amount2 flex justify-center items-center mr-2 text-sm">
+                                        <p class="text-lightFont">$ 0 Credits</p>
                                     </div>
-                                    <div class="credit-amount2">
-                                        <p>$ 0 Credits</p>
-                                    </div>
+                                    <div class="avatar2 w-[40px] h-[40px] rounded-full border-[1.5px] border-solid border-lightFont">
+                                        <img src="/media/default-profile.jpg" alt="" class="w-[40px] h-[40px] object-cover rounded-full">
+                                    </div>                            
                                 </a>
                             </div>
         
@@ -75,7 +77,7 @@
 
                 </div>
 
-                <div class="flex flex-row gap-2.5 items-center h-[80px]" id="navLinks">
+                <div class="nav-links flex-row gap-2.5 items-center h-[80px]" id="navLinks">
                     <a href="../index.html" class="active-link text-darkGreyFont text-base p-1.5 rounded-lg border border-darkGreyFont hover:border-[1.5px] hover:border-darkGreyFont hover:bg-darkGreyFont hover:bg-[url(/media/textures/grain-texture2.png)] hover:bg-repeat hover:bg-contain hover:bg-[length:100px] hover:text-lightFont">Home</a>
                     <div class="w-2.5 h-2.5 bg-orange rounded-full"></div>
                     <a href="/listings/all-listings.html" class="text-darkGreyFont text-base p-1.5 rounded-lg border border-transparent hover:border-darkGreyFont hover:bg-darkGreyFont hover:bg-[url(/media/textures/grain-texture2.png)] hover:bg-repeat hover:bg-contain hover:bg-[length:100px] hover:text-lightFont">Listings</a>
@@ -85,7 +87,7 @@
                     <a href="/error.html" class="text-darkGreyFont text-base p-1.5 rounded-lg border border-transparent hover:border-darkGreyFont hover:bg-darkGreyFont hover:bg-[url(/media/textures/grain-texture2.png)] hover:bg-repeat hover:bg-contain hover:bg-[length:100px] hover:text-lightFont">Contact us</a>
                 </div>
 
-                <div class="user-options h-[100px] flex items-center hidden">
+                <div class="user-options h-[100px] items-center">
 
                     <div class="login-options hidden flex flex-row items-center gap-5">
                         <a href="/auth/login.html" class="option-login border border-bodyBackground rounded-lg px-2 py-1 text-bodyBackground hover:bg-green hover:text-lightFont hover:border-green transition-all">Login</a>
