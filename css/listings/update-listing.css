@@ -9,13 +9,13 @@ main {
     margin-top: 140px;
     color: #29272F;
 }
-/*Right side of the screen*/
+
 .preview-section {
+
     width: 40%;
     height: 80vh;
-}
+
 .preview-listing {
-    position: relative;
     width: 100%;
     height: 100%;
     padding-bottom: 15px;
@@ -30,56 +30,58 @@ main {
     flex-direction: column;
     margin-top: 0px;
     padding-top: 0px;
-}  
-.preview-media {
-    width: 95%;
-    height: 100%;
-    max-height: 450px;
-    margin-top: 0px;
-    border-radius: 15px;
-    padding: 10px;
 
-    img {
-        margin-top: 0px;
-        width: 100%;
+    .preview-media {
+        width: 95%;
         height: 100%;
-        object-fit: cover;
+        max-height: 450px;
+        margin-top: 0px;
         border-radius: 15px;
+        padding: 10px;
+
+        img {
+            margin-top: 0px;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 15px;
+        }
     }
+
+    .preview-listing-content{ 
+
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+
+        .preview-title{
+            font-size: 25px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            margin-top: 20px;
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+
+        .preview-description {
+            font-size: 17px;
+            margin-bottom: 50px;
+        }
+
+        .preview-tags {
+            display: flex;
+            flex-direction: row;
+            gap: 15px;
+            margin-bottom: 10px;
+        }
+
+        .preview-ends {
+            opacity: 75%;
+        }
+    }
+  }  
 }
-.preview-listing-content{ 
 
-    width: 90%;
-    margin-left: 5%;
-    margin-right: 5%;
-
-    .preview-title{
-        font-size: 25px;
-        font-weight: 600;
-        margin-bottom: 20px;
-        margin-top: 20px;
-        margin-left: 0px;
-        margin-right: 0px;
-    }
-
-    .preview-description {
-        font-size: 17px;
-        margin-bottom: 50px;
-    }
-
-    .preview-tags {
-        display: flex;
-        flex-direction: row;
-        gap: 15px;
-        margin-bottom: 10px;
-    }
-
-    .preview-ends {
-        opacity: 75%;
-    }
-}
-
-/*Left side of teh screen*/
 .update-section {
     height: 80vh;
     width: 60%;
@@ -96,194 +98,105 @@ main {
         font-weight: 700;
 
     }
-}
-.update-form {
 
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
+    .update-form {
 
-    width: 100%;
-
-    label {
-        font-weight: 600;
         display: flex;
         flex-direction: column;
-        margin-bottom: 5px;
-    }
+        gap: 25px;
 
-    input {
-        width: 75%;
-        background-color: #F2F2F2;
-        border: solid 1.5px #29272F;
-        border-radius: 100px;
-        padding: 5px;
-
-        &[type="text"]::placeholder, &[type="url"]::placeholder{
-            color: #29272F;
-        }
-    }
-
-    textarea {
-        width: 75%;
-        height: 150px;
-        background-color: #F2F2F2;
-        border: solid 1.5px #29272F;
-        border-radius: 15px;
-        padding: 5px;
-
-        &::placeholder {
-            color: #29272F;
-        }
-    }
-
-    .ends-at {
-
-        input{
-            width: 200px;
-        }
-    }
-
-}
-.buttons {
-    display: flex;
-    flex-direction: row;
-    gap: 40px;
-}
-.submit-button {
-    background-color: #81AB76;            
-    color: #F2F2F2;
-    padding: 10px;
-    border: none;
-    margin-top: 80px;
-    border-radius: 5px;
-    font-size: 15px;
-    font-weight: 600;
-    width: 150px;
-    font-family: "Libre Bodoni", serif;
-
-    &:hover {
-        cursor: pointer;
-        transition: 0.2s;
-        background-color: #29272F;
-        background-image: url(/media/textures/grain-texture2.png);
-        background-repeat: repeat;
-        background-size: contain;
-        background-size: 100px; 
-    }
-}
-.delete-button {
-    background-color: #D6650F;            
-    color: #F2F2F2;
-    border: none;
-    padding: 10px;
-    margin-top: 80px;
-    border-radius: 5px;
-    font-size: 15px;
-    font-weight: 600;
-    font-family: "Libre Bodoni", serif;
-    width: 150px;
-    &:hover {
-        cursor: pointer;
-        transition: 0.2s;
-        background-color: #29272F;
-        background-image: url(/media/textures/grain-texture2.png);
-        background-repeat: repeat;
-        background-size: contain;
-        background-size: 100px; 
-    }
-}
-
-@media (max-width: 990px) {
-    .update-section {
-        margin-left: 0%;
-    }
-    .preview-section {
-        width: 50%;
-        height: 80vh;
-    }
-}
-
-@media (max-width: 800px) {
-    main {
-        flex-direction: column;
-        padding-bottom: 90%;
-    } 
-    .update-section {
-        margin-left: 0%;
         width: 100%;
-        margin-top: 450px;
-        margin-bottom: 40px;
-    }
-    .preview-section {
-        width: 100%;
-        height: 80vh;
+
+        label {
+            font-weight: 600;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 75%;
+            background-color: #F2F2F2;
+            border: solid 1.5px #29272F;
+            border-radius: 100px;
+            padding: 5px;
+
+            &[type="text"]::placeholder, &[type="url"]::placeholder{
+                color: #29272F;
+            }
+        }
+
+        textarea {
+            width: 75%;
+            height: 150px;
+            background-color: #F2F2F2;
+            border: solid 1.5px #29272F;
+            border-radius: 15px;
+            padding: 5px;
+
+            &::placeholder {
+                color: #29272F;
+            }
+        }
+
+        .ends-at {
+
+            input{
+                width: 200px;
+            }
+        }
+
     }
 
     .buttons {
-        width: 100%;
-        justify-content: center;
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
     }
 
     .submit-button {
-        margin-top: 40px;
+        background-color: #81AB76;            
+        color: #F2F2F2;
+        padding: 10px;
+        border: none;
+        margin-top: 80px;
+        border-radius: 5px;
+        font-size: 15px;
+        font-weight: 600;
+        width: 150px;
+        font-family: "Libre Bodoni", serif;
+
+        &:hover {
+            cursor: pointer;
+            transition: 0.2s;
+            background-color: #29272F;
+            background-image: url(/media/textures/grain-texture2.png);
+            background-repeat: repeat;
+            background-size: contain;
+            background-size: 100px; 
+        }
     }
+
     .delete-button {
-        margin-top: 40px;
-    }
-}
-
-@media (max-width: 680px) {
-    main {
-        padding-bottom: 100%;
-    } 
-
-    .update-form {    
-        input {
-            width: 95%;
-        }
-        textarea {
-            width: 95%;
-        }    
-    }
-}
-
-@media (max-width: 550px) {
-    .update-section {
-        margin-top: 350px;
-    } 
-}
-
-@media (max-width: 450px) {
-    .update-section {
-        margin-top: 270px;
-    } 
-    main {
-        padding-bottom: 110%;
-    } 
-
-    .preview-listing-content{ 
-        .preview-title{
-            font-size: 20px;
-        }
-        .preview-description {
-            font-size: 14px;
-            margin-bottom: 30px;
-        }
-        .preview-tags {
-            gap: 10px;
+        background-color: #D6650F;            
+        color: #F2F2F2;
+        border: none;
+        padding: 10px;
+        margin-top: 80px;
+        border-radius: 5px;
+        font-size: 15px;
+        font-weight: 600;
+        font-family: "Libre Bodoni", serif;
+        width: 150px;
+        &:hover {
+            cursor: pointer;
+            transition: 0.2s;
+            background-color: #29272F;
+            background-image: url(/media/textures/grain-texture2.png);
+            background-repeat: repeat;
+            background-size: contain;
+            background-size: 100px; 
         }
     }
-}
 
-@media (max-width: 380px) {
-    .update-section {
-        margin-top: 220px;
-        h1 {
-            font-size: 25px;
-        }
-    } 
-    main {
-        padding-bottom: 120%;
-    } 
 }
