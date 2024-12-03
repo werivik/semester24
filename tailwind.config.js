@@ -1,21 +1,29 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './src/**/*.html',
+    // HTML files in various folders
+    './index.html',
+    './listings/**/*.html',
+    './profile/**/*.html',
+    './auth/**/*.html',
+    './media/**/*.{html,js}',
+
+    // JS files in various folders
+    './js/**/*.js',
+
+    // CSS/SCSS files in the src folder
+    './src/**/*.scss',
+    './src/**/*.css',
     './src/css/**/*.css',
   ],
   theme: {
     extend: {
       colors: {
-        fontColorDark: '#29272F',
-        fontColorLight: '#F2F2F2',
-        bodyColor: '#EBEEE9',
-        orangeColor: '#D6650F',
-        blackColor: '#29272F',
-        greenColor: '#81AB76',
-      },
-      fontFamily: {
-        serif:["Libre Bodoni", serif]
+        bodyBackground: '#EBEEE9',
+        darkGreyFont: '#29272F',
+        lightFont: '#F2F2F2',
+        green: '#81AB76',
+        orange: '#D6650F',
       },
     },
   },
