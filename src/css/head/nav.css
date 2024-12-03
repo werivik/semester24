@@ -1,438 +1,150 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Header and Menu */
 header {
-width: 100%;
-height: 80px;
-border-bottom: solid 1.5px #29272F;
-background-color: #EBEEE9;
-top: 0;
-position: fixed;
-z-index: 999;
-font-family: "Libre Bodoni", serif;
+  @apply w-full h-20 border-b-2 border-gray-800 bg-gray-100 fixed top-0 z-50 font-serif;
 }
 
 nav {
-    margin-left: 10%;
-    margin-right: 10%;
-    height: 80px;
-    margin-top: -16px;
+  @apply container mx-auto px-4 md:px-16 h-20 flex justify-between items-center;
 }
 
-ul {
-    height: 80px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+a.logo {
+  @apply flex items-center justify-center h-20 w-20 ml-[-40px];
 }
 
-.logo {
-    height: 80px;
-    width: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 0;
-    margin-left: -40px;
-
-    a {
-        text-decoration: none;
-    }
-
-    img {
-        height: 75px;
-        width: 75px;
-        object-fit: contain;
-    }
+.logo img {
+  @apply h-[75px] w-[75px] object-contain;
 }
 
 .links {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
+  @apply hidden md:flex space-x-2;
+}
 
-    .nav-dot {
-        width: 10px;
-        height: 10px;
-        background-color: #D6650F;
-        border-radius: 100px;
-
-        margin-top: 10px;
-    }
-
-    .active-link {
-        border: solid 1.5px #29272F;
-    }
-
-    a {
-        text-decoration: none;
-        color: #29272F;
-        font-size: 16px;
-        padding: 5px;
-        border-radius: 10px;
-        border: solid 1.5px #29272f00;
-
-        &:hover {
-            border-color: #29272F;
-            transition: 0.3s;
-            background-color: #29272F;
-            background-image: url(/media/textures/grain-texture2.png);
-            background-repeat: repeat;
-            background-size: contain;
-            background-size: 100px;
-            color: #F2F2F2;
-        }
-    }
-
+.links a {
+  @apply text-gray-800 text-sm py-1 px-2 rounded-lg border border-transparent hover:border-gray-800 hover:bg-gray-800 hover:text-gray-100 transition duration-300;
 }
 
 .user-options {
-
-    .login-options {
-        display: none;
-        flex-direction: row;
-        align-items: center;
-        gap: 20px;
-
-        .option-login {
-            padding: 5px;
-            border: solid #29272F 1.5px;
-            border-radius: 10px;
-
-            text-decoration: none;
-            color: #29272F;
-
-            &:hover {
-                background-color: #81AB76;
-                color: #F2F2F2;
-                border-color: #81AB76;
-                transition: 0.2s;
-            }
-        }
-
-        .option-register {
-            padding: 10px;
-            border: solid #29272F 1.5px;
-            border-radius: 10px;
-
-            text-decoration: none;
-            color: #F2F2F2;
-            background-color: #29272F;
-            background-image: url(/media/textures/grain-texture2.png);
-            background-repeat: repeat;
-            background-size: contain;
-            background-size: 100px;
-
-            &:hover {
-                background-color: #D6650F;
-                border-color: #D6650F;
-                transition: 0.2s;
-                background-image: none;
-            }
-        }
-    }
-
-    .user-profile {
-
-        .active-profile {
-            background-color: #D6650F;
-            background-image: none;
-        }
-    }
-
-    .user-profile {
-        display: flex;
-
-        a {
-            text-decoration: none;
-            color: #F2F2F2;
-            display: flex;
-            flex-direction: row;
-            background-color: #29272F;
-            background-image: url(/media/textures/grain-texture2.png);
-            background-repeat: repeat;
-            background-size: contain;
-            background-size: 100px;
-            color: #F2F2F2;
-            padding: 5px;
-            padding-left: 10px;
-            border-radius: 20px;
-
-            .credit-amount {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                margin-right: 10px;
-                font-size: 13px;
-            }
-    
-            .avatar {
-                width: 40px;
-                height: 40px;
-                border-radius: 100px;
-                border: solid 1.5px #F2F2F2;
-                background-color: #29272F;
-    
-                img {
-                    height: 100%;
-                    width: 100%;
-                    object-fit: cover;
-                    border-radius: 100px;
-                }
-            }
-
-            &:hover {
-                background-color: #D6650F;
-                transition: 0.2s;
-                background-image: none;
-            }
-        }
-    }
-
+  @apply hidden md:flex space-x-6;
 }
 
+.login-options a {
+  @apply px-4 py-2 border-2 border-gray-800 rounded-lg text-gray-800 hover:bg-gray-600 hover:text-white transition;
+}
 
+.option-register {
+  @apply px-4 py-2 border-2 border-gray-800 rounded-lg text-white bg-gray-800 hover:bg-orange-500 transition;
+}
+
+.user-profile a {
+  @apply flex items-center space-x-2 text-white bg-gray-800 hover:bg-orange-500 rounded-lg px-4 py-2;
+}
+
+.avatar {
+  @apply w-8 h-8 rounded-full border-2 border-white;
+}
+
+.credit-amount {
+  @apply text-sm;
+}
+
+/* Responsive Menu */
 .responsive-menu {
-    position: relative;
-    display: none;
-
-    left: 5%;
-    transform: translate(-5%);
-
-    input {
-        opacity: 0;
-    }
-
-    .links2 {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        width: 250px;
-        top: 49.5px;
-        left: 50%;
-        transform: translate(-50%);
-        height: 200px;
-        border-radius: 0px 0px 25px 25px;
-        border: solid 1.5px #29272F;
-        background-color: #D6650F;
-        padding: 20px;
-        gap: 20px; 
-
-        a {
-            text-decoration: none;
-            color: #F2F2F2;
-            font-size: 16px;
-            padding: 5px;
-            border-radius: 10px;
-            border: solid 1.5px #29272f00;
-        }
-    }
-
-    .user-options2 {
-        display: none;
-        flex-direction: column;
-    }
-
-    .login-options2 {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-
-        .option-login2 {
-            padding: 10px;
-            border: solid #F2F2F2 1.5px;
-            border-radius: 10px;
-            color: #F2F2F2;
-            font-size: 14px;
-
-            text-decoration: none;
-
-            &:hover {
-                background-color: #81AB76;
-                border-color: #81AB76;
-                transition: 0.2s;
-            }
-        }
-
-        .option-register2 {
-            padding: 10px;
-            border-radius: 10px;
-            font-size: 14px;
-
-            text-decoration: none;
-            color: #F2F2F2;
-            background-color: #29272F;
-
-            &:hover {
-                background-color: #81AB76;
-                transition: 0.2s;
-                background-image: none;
-            }
-        }
-    }
-
-    .user-profile2 {
-        display: none;
-        margin-top: -10px;
-
-        a {
-            text-decoration: none;
-            color: #F2F2F2;
-            display: flex;
-            flex-direction: row;
-            background-color: #29272F;
-            background-image: url(/media/textures/grain-texture2.png);
-            background-repeat: repeat;
-            background-size: contain;
-            background-size: 100px;
-            color: #F2F2F2;
-            padding: 5px;
-            padding-right: 10px;
-            border-radius: 20px;
-
-            .credit-amount2 {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                margin-left: 10px;
-                padding-right: 5px;
-                font-size: 13px;
-            }
-    
-            .avatar2 {
-                width: 40px;
-                height: 40px;
-                border-radius: 100px;
-                border: solid 1.5px #F2F2F2;
-    
-                img {
-                    height: 100%;
-                    width: 100%;
-                    object-fit: contain;
-                    border-radius: 100px;
-                }
-            }
-        }
-    }
+  @apply relative hidden md:block ml-[5%] transform -translate-x-1/5;
 }
 
 .hamburger-menu {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    cursor: pointer;
+  @apply absolute top-0 left-0 flex flex-col gap-1 cursor-pointer md:hidden;
 }
 
 .hamburger-line {
-    width: 30px;
-    height: 5px;
-    background-color: #29272F;
-    border-radius: 100px;
+  @apply bg-gray-800 w-8 h-1 rounded-full;
+}
+
+.menu-toggle {
+  @apply hidden;
 }
 
 .menu-toggle:checked + .hamburger-menu .hamburger-line:nth-child(1) {
-    transform: rotate(45deg);
-    position: relative;
-    top: 10px;
-    transition: 0.2s;
+  @apply transform rotate-45 top-2 transition duration-200;
 }
 
 .menu-toggle:checked + .hamburger-menu .hamburger-line:nth-child(2) {
-    opacity: 0;
-    transition: 0.2s;
+  @apply opacity-0 transition duration-200;
 }
 
 .menu-toggle:checked + .hamburger-menu .hamburger-line:nth-child(3) {
-    transform: rotate(-45deg);
-    position: relative;
-    top: -8px;
-    transition: 0.2s;
+  @apply transform rotate-[-45deg] bottom-2 transition duration-200;
 }
 
-.menu-toggle:checked ~ .links2 {
-    display: flex;
-    animation: slide-down 0.3s ease-in-out;
+.menu {
+  @apply hidden md:flex items-center space-x-4;
 }
 
+.menu-item {
+  @apply block py-2 md:inline-block md:py-0 text-center text-white hover:text-gray-300;
+}
+
+/* Mobile Navigation */
 @media (max-width: 990px) {
-    .links {
-        display: none;
-    }
-    .responsive-menu {
-        display: block;
-    }
-    .menu-toggle:checked ~ .links2 {
-        display: flex;
-    }
-    .hamburger-menu {
-        display: flex;
-        z-index: 999;
-    }
-    .logo {
-        height: 60px;
-        width: 60px;
-    
-        img {
-            height: 60px;
-            width: 60px;
-        }
-    }
-    .user-options {
-        .login-options {
-            gap: 10px;
-            .option-login {
-                font-size: 14px;
-            }
-            .option-register {
-                font-size: 14px;
-            }
-        }
-    
-        .user-profile {
-            display: flex;
-    
-            a {
-    
-                .credit-amount {
-                    font-size: 11px;
-                }
-        
-                .avatar {
-                    width: 30px;
-                    height: 30px;
-                }
-            }
-        }
-    }
+  .links {
+    @apply hidden;
+  }
 
-    nav {
-        margin-left: 5%;
-        margin-right: 5%;
-    }
+  .responsive-menu {
+    @apply block;
+  }
+
+  .menu {
+    @apply flex flex-col items-center space-y-4 bg-gray-800 p-4 md:p-0 md:bg-transparent;
+  }
+
+  .hamburger-menu {
+    @apply z-50;
+  }
+
+  .logo {
+    @apply h-16 w-16;
+  }
+
+  .user-options {
+    @apply space-x-4;
+  }
+
+  .user-profile a {
+    @apply px-4 py-2 text-sm;
+  }
 }
 
 @media (max-width: 690px) {
-    .user-options {
-        display: none;
+  .user-options {
+    @apply hidden;
+  }
+
+  .responsive-menu {
+    @apply block;
+
+    .links2 {
+      @apply hidden flex-col absolute inset-x-0 top-16 bg-orange-500 text-white p-4 space-y-4;
     }
 
-    .responsive-menu { 
-        margin-right: 5%;
-        .links2 {
-            display: none;
-            flex-direction: column;
-            position: absolute;
-            width: 250px;
-            top: 49.5px;
-            left: 25%;
-            transform: translate(-74%);
-            height: 250px;
-    
-        }
-        .user-options2 {
-            display: flex;
-        }
+    .user-options2 {
+      @apply flex;
     }
+  }
+
+  .user-profile2 a {
+    @apply flex items-center space-x-2 text-white bg-gray-800 hover:bg-orange-500 rounded-lg px-4 py-2;
+  }
+
+  .avatar2 {
+    @apply w-8 h-8 rounded-full border-2 border-white;
+  }
+
+  .credit-amount2 {
+    @apply text-sm;
+  }
 }
