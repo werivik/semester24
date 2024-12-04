@@ -4,10 +4,11 @@ import { headers } from "../headers.js";
 let sortBy = "newest";
 let currentPage = 1;
 let tagFilter = null;
+let totalListings = 0;
 
 function getListingsPerPage() {
   const screenWidth = window.innerWidth;
-  return screenWidth <= 1300 ? 4 : 9;
+  return screenWidth <= 1300 ? 9 : 9;
 }
 
 export async function fetchListings() {
@@ -58,7 +59,6 @@ async function loadListings() {
     const listingsPerPage = getListingsPerPage();
 
     const sortedListings = [...listings].sort((a, b) => {
-      
       if (sortBy === "newest") {
         return new Date(b.created) - new Date(a.created);
       } 
@@ -66,11 +66,10 @@ async function loadListings() {
       else if (sortBy === "oldest") {
         return new Date(a.created) - new Date(b.created);
       }
-
       return 0;
     });
 
-    const totalListings = sortedListings.length;
+    totalListings = sortedListings.length;
     const totalPages = Math.ceil(totalListings / listingsPerPage);
 
     const paginatedListings = sortedListings.slice(
@@ -136,16 +135,15 @@ async function loadListings() {
     });
 
     document.getElementById("prevPage").disabled = currentPage === 1;
-    document.getElementById("nextPage").disabled =
-      currentPage === totalPages;
+    document.getElementById("nextPage").disabled = currentPage === totalPages;
 
     const tagCounts = {};
     listings.forEach((listing) => {
       
       if (Array.isArray(listing.tags)) {
         listing.tags.forEach((tag) => {
-          const trimmedTag = tag.trim();
           
+          const trimmedTag = tag.trim();
           if (trimmedTag) {
             tagCounts[trimmedTag] = (tagCounts[trimmedTag] || 0) + 1;
           }
@@ -160,7 +158,9 @@ async function loadListings() {
 
     if (popularTagsContainer) {
       popularTagsContainer.innerHTML = mostUsedTags
-        .map((tag) => `<div class="tag" data-tag="${tag}"><p>${tag}</p></div>`)
+        .map(
+          (tag) => `<div class="tag" data-tag="${tag}"><p>${tag}</p></div>`
+        )
         .join("");
     }
 
