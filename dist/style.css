@@ -1013,12 +1013,6 @@ video {
 .pl-\[20px\] {
   padding-left: 20px;
 }
-.pl-\[7px\] {
-  padding-left: 7px;
-}
-.pr-\[7px\] {
-  padding-right: 7px;
-}
 .pt-0 {
   padding-top: 0px;
 }
@@ -1176,6 +1170,30 @@ h2 {
 
 h3 {
   font-size: 25px;
+}
+
+.placeholder\:pl-\[5px\]::-moz-placeholder {
+  padding-left: 5px;
+}
+
+.placeholder\:pl-\[5px\]::placeholder {
+  padding-left: 5px;
+}
+
+.placeholder\:font-serif::-moz-placeholder {
+  font-family: "Libre Bodoni", serif;
+}
+
+.placeholder\:font-serif::placeholder {
+  font-family: "Libre Bodoni", serif;
+}
+
+.placeholder\:opacity-75::-moz-placeholder {
+  opacity: 0.75;
+}
+
+.placeholder\:opacity-75::placeholder {
+  opacity: 0.75;
 }
 
 .hover\:ml-\[-10px\]:hover {

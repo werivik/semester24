@@ -52,6 +52,7 @@ async function placeBid(bidAmount) {
 
         const data = await response.json();
         alert(`Bid placed successfully!`);
+        window.location.reload();
         return data;
 
     } 

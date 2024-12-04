@@ -51,9 +51,12 @@ async function loadListingDetails() {
             detailContainer.innerHTML = "<p>Failed to load listing details. Please try again later.</p>";
         }
         return;
+    
     }
 
-    const { title, description, media, created, updated, endsAt, _count, creator } = listingDetails.data;
+    console.log(listingDetails);
+
+    const { title, description, media, created, updated, endsAt, _count } = listingDetails.data;
     const { bids } = _count;
 
     const mediaContainer = document.querySelector(".listing-left-side .listing-media");
