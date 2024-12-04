@@ -118,11 +118,11 @@
                 <button id="confirm-delete-no" class="confirm-no">No</button>
               </div>
             </div>
-          </div>
+        </div>
 
-          <div class="ml-[10%] mr-[10%] pt-[160px] lPaddingUp flex flex-row justify-between">
+        <div class="ml-[10%] mr-[10%] pt-[160px] lPaddingUp flex flex-row justify-between">
 
-            <section class="profile-info-section sticky bg-[#29272F] bg-[url('/media/textures/grain-texture2.png')] bg-repeat bg-contain bg-[100px] h-[75vh] w-[300px] rounded-[15px] text-[#F2F2F2]">
+            <section class="profile-info-section font-serif sticky bg-[#29272F] bg-[url('/media/textures/grain-texture2.png')] bg-repeat bg-contain bg-[100px] h-[75vh] w-[300px] rounded-[15px] text-[#F2F2F2]">
                 <h1>
                     <div id="username"></div>
                 </h1>
@@ -130,33 +130,33 @@
                 <div class="profile-info-content p-[10px]">
                     <div class="profile-content">
     
-                        <div class="profile-info">
+                        <div class="profile-info flex flex-col items-center">
         
-                            <div id="userCredit" class="user-credit"></div>
+                            <div id="userCredit" class="user-credit mb-[10px] text-[#D6650F] font-semibold"></div>
 
-                            <div id="avatar-container" class="avatar-container">
-                                <img id="avatar" src="/media/default-profile.jpg" alt="Avatar"/>
+                            <div id="avatar-container" class="avatar-container w-[150px] h-[150px] rounded-full border-[1.5px] border-[#F2F2F2]">
+                                <img id="avatar" src="/media/default-profile.jpg" alt="Avatar" class="w-full h-full object-cover rounded-full"/>
                             </div>
     
-                            <div class="name-email-bio">
-                                <div id="name" class="user-name">Username</div>
+                            <div class="name-email-bio flex flex-col gap-5 w-full items-center">
+                                <div id="name" class="user-name text-center text-[20px] mt-[20px]">Username</div>
         
-                                <div id="email" class="user-email">Email</div>
+                                <div id="email" class="user-email text-center text-[16px] opacity-[0.65] mt-[-20px]">Email</div>
             
-                                <div id="bio" class="user-bio">Hi! You can now change your bio to better fit your profile...</div>
+                                <div id="bio" class="user-bio mb-[80px] w-[85%] bg-[#f2f2f246] p-[5px] rounded-[5px]">Hi! You can now change your bio to better fit your profile...</div>
                             </div>
         
                         </div>
     
-                        <div class="shortcut-links">
-                            <a href="#users-listings-section" class="shortcut">My Listings</a>
-                            <a href="#update-user-info" class="shortcut">Edit Profile</a>
+                        <div class="shortcut-links flex flex-col">
+                            <a href="#users-listings-section" class="shortcut text-[#F2F2F2] no-underline mt-[20px] text-[20px] text-center hover:text-[#81AB76] transition-all duration-200">My Listings</a>
+                            <a href="#update-user-info" class="shortcut text-[#F2F2F2] no-underline mt-[20px] text-[20px] text-center hover:text-[#81AB76] transition-all duration-200">Edit Profile</a>
                         </div>
                                 
                     </div>
         
-                    <div class="logout-content">
-                        <button id="logoutButton" class="logout-button">Logout</button>
+                    <div class="logout-content relative w-full h-[20%]">
+                        <button id="logoutButton" class="logout-button absolute top-full left-1/2 transform -translate-x-1/2 h-[30px] w-[80px] border-[1.5px] border-[#F2F2F2] rounded-[10px] bg-[#29272F] text-[#F2F2F2] font-semibold transition-all duration-200 hover:bg-[#D6650F] hover:border-[#D6650F] hover:text-[#29272F] cursor-pointer">Logout</button>
                     </div>
     
                 </div>
