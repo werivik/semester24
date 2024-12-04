@@ -624,6 +624,9 @@ video {
 .mt-5 {
   margin-top: 1.25rem;
 }
+.mt-\[120px\] {
+  margin-top: 120px;
+}
 .mt-\[40px\] {
   margin-top: 40px;
 }
@@ -759,6 +762,9 @@ video {
 .flex-wrap {
   flex-wrap: wrap;
 }
+.items-start {
+  align-items: flex-start;
+}
 .items-center {
   align-items: center;
 }
@@ -789,6 +795,9 @@ video {
 .gap-\[20px\] {
   gap: 20px;
 }
+.gap-\[40px\] {
+  gap: 40px;
+}
 .overflow-x-hidden {
   overflow-x: hidden;
 }
@@ -806,6 +815,9 @@ video {
 }
 .rounded-\[25px\] {
   border-radius: 25px;
+}
+.rounded-\[5px\] {
+  border-radius: 5px;
 }
 .rounded-full {
   border-radius: 9999px;
@@ -869,6 +881,10 @@ video {
 .bg-\[\#D6650F\] {
   --tw-bg-opacity: 1;
   background-color: rgb(214 101 15 / var(--tw-bg-opacity, 1));
+}
+.bg-\[\#EBEEE9\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(235 238 233 / var(--tw-bg-opacity, 1));
 }
 .bg-\[\#F2F2F2\] {
   --tw-bg-opacity: 1;
@@ -963,6 +979,9 @@ video {
 }
 .pb-20 {
   padding-bottom: 5rem;
+}
+.pb-\[160px\] {
+  padding-bottom: 160px;
 }
 .pl-2 {
   padding-left: 0.5rem;
@@ -1135,14 +1154,14 @@ h3 {
   border-width: 1.5px;
 }
 
-.hover\:border-\[\#D6650F\]:hover {
-  --tw-border-opacity: 1;
-  border-color: rgb(214 101 15 / var(--tw-border-opacity, 1));
-}
-
 .hover\:border-darkGreyFont:hover {
   --tw-border-opacity: 1;
   border-color: rgb(41 39 47 / var(--tw-border-opacity, 1));
+}
+
+.hover\:border-specialOrange:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(214 101 15 / var(--tw-border-opacity, 1));
 }
 
 .hover\:bg-\[\#29272F\]:hover {
@@ -1155,11 +1174,6 @@ h3 {
   background-color: rgb(129 171 118 / var(--tw-bg-opacity, 1));
 }
 
-.hover\:bg-\[\#D6650F\]:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(214 101 15 / var(--tw-bg-opacity, 1));
-}
-
 .hover\:bg-\[none\]:hover {
   background-color: none;
 }
@@ -1167,6 +1181,11 @@ h3 {
 .hover\:bg-darkGreyFont:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(41 39 47 / var(--tw-bg-opacity, 1));
+}
+
+.hover\:bg-specialOrange:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(214 101 15 / var(--tw-bg-opacity, 1));
 }
 
 .hover\:bg-\[url\(\/media\/textures\/grain-texture2\.png\)\]:hover {
