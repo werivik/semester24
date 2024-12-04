@@ -143,6 +143,63 @@
         }
     }
 }
+@media (max-width: 1200px) {
+    .listing {
+        width: calc(47% - 10px);
+        height: 605px;
+
+        .listing-content {
+            height: 650px;        
+            .listing-details {
+                height: 40%;
+            }
+
+            .listing-title {
+                font-size: 1.8vw;
+            }
+
+            .listing-description {
+                font-size: 1.2vw;               
+            }
+
+            .total-bids {
+                font-size: 1.5vw;
+            }
+        }      
+        .see-listing {
+            height: 55px;
+        }
+    }
+}
+@media (max-width: 750px) {
+    .listing {
+        width: 100%;
+        height: 605px;
+        margin-bottom: 20px;
+
+        .listing-content {
+            height: 650px;        
+            .listing-details {
+                height: 40%;
+            }
+
+            .listing-title {
+                font-size: 1.8vw;
+            }
+
+            .listing-description {
+                font-size: 1.2vw;               
+            }
+
+            .total-bids {
+                font-size: 1.5vw;
+            }
+        }      
+        .see-listing {
+            height: 55px;
+        }
+    }
+}
 /*
 @media (max-width: 1300px) {
     .all-listings {
