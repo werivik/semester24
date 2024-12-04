@@ -30,7 +30,7 @@
 <script src="https://kit.fontawesome.com/2ef99fbf3a.js" crossorigin="anonymous">
 </script>
 
-<body>
+<body class="bg-bodyBackground p-0 m-0 h-full sm:h-[100%] overflow-x-hidden font-serif">
 
     <header class="bg-bodyBackground h-[80px] w-full fixed top-0 z-[999] border-b-[1.5px] border-darkGreyFont">
         <nav class="ml-[10%] mr-[10%] h-[80px]">
@@ -109,52 +109,55 @@
         </nav>
     </header>
 
-    <main class="min-h-screen mb-auto font-serif">
+    <main class="min-h-screen h-full sm:mb-auto mb-[80%] font-serif">
 
-        <div class="ml-[10%] mr-[10%] pt-[160px] pb-[160px] h-full w-full flex flex-row gap-[40px] lPaddingUp">
-
-            <section class="listing-left-side w-[40%] h-[75vh] pb-0 mb-0">
-                <div class="listing-media"></div>
+        <div class="ml-[10%] mr-[10%] pt-[160px] pb-[160px] h-full w-[85%] sm:w-full  flex flex-col sm:flex-row gap-[40px] sm:gap-[20px] lPaddingUp">
+    
+            <section class="listing-left-side lg:w-[40%] sm:w-[40%] w-full lg:h-[75vh] md:h-[75vh] sm:h-[55vh] pb-0 mb-0">
+                <div class="listing-media w-full h-full flex justify-center items-center rounded-[25px] sm:w-[40%]"></div>
             </section>
-
-            <section class="listing-right-side w-[55%] h-[75vh] pb-0 mb-0">
-
-                <div class="listing-detail w-[70%]">
+    
+            <section class="listing-right-side lg:w-[55%] sm:w-[100%] w-full h-full sm:h-[75vh] sm:pb-[80px] pb-0 mb-0">
+    
+                <div class="listing-detail w-full sm:w-[70%]">
+    
                     <div class="go-back-button mb-[20px]">
                         <a href="javascript:void(0)" onclick="window.history.back();" class="font-serif rounded-[10px] p-[5px] text-[14px] text-[#F2F2F2] bg-[#29272F] w-[80px] no-underline flex flex-row items-center justify-center transition-all duration-200 hover:bg-[#D6650F] hover:text-[#F2F2F2]">
                             Go Back
                         </a>
                     </div>
+    
                     <h1 class="text-[35px] mb-[40px]"></h1>
-          
-                <div class="listing-content">
-                  <div class="middle-content">
-                    <p class="description mb-[120px]"></p>
-          
-                    <div class="product-meta flex flex-col gap-[20px]">
-                        <div class="place-bid-content">
-                            <input type="number" id="bidAmount" min="0" step="any" placeholder="Enter your bid..." class="border border-[#29272F] rounded-[10px] h-[35px] bg-transparent placeholder-[#29272F] placeholder:opacity-75 placeholder:pl-[5px] placeholder:font-serif">
-                            <button class="place-bid font-serif bg-[#D6650F] text-[#F2F2F2] h-[35px] w-[55px] ml-[10px] border-0 rounded-[10px] font-serif hover:bg-[#81AB76] hover:cursor-pointer transition-all duration-200" id="placeBid">
-                                BID
-                            </button>                              
+    
+                    <div class="listing-content">
+                        <div class="middle-content">
+                            <p class="description mb-[120px]"></p>
+    
+                            <div class="product-meta flex flex-col gap-[20px]">
+                                <div class="place-bid-content">
+                                    <input type="number" id="bidAmount" min="0" step="any" placeholder="Enter your bid..." class="border border-[#29272F] rounded-[10px] h-[35px] bg-transparent placeholder-[#29272F] placeholder:opacity-75 placeholder:pl-[5px] placeholder:font-serif">
+                                    <button class="place-bid font-serif bg-[#D6650F] text-[#F2F2F2] h-[35px] w-[55px] ml-[10px] border-0 rounded-[10px] font-serif hover:bg-[#81AB76] hover:cursor-pointer transition-all duration-200" id="placeBid">
+                                        BID
+                                    </button>
+                                </div>
+                                <p class="total-bids font-serif">Total Bids:</p>
+                            </div>
                         </div>
-                        <p class="total-bids font-serif">Total Bids:</p>
+                        
+                        <div class="listing-date-info mt-[60px]">
+                            <p class="ends">Ends at:</p>
+                            <p id="createdListing" class="created-date text-[14px] italic"></p>
+                            <p id="updatedListing" class="updated-date text-[14px] italic"></p>                    
+                        </div>
                     </div>
-                  </div>
-                    
-                  <div class="listing-date-info mt-[60px]">
-                    <p class="ends">Ends at:</p>
-                    <p id="createdListing" class="created-date text-[14px] italic"></p>
-                    <p id="updatedListing" class="updated-date text-[14px] italic"></p>                    
-                  </div>
                 </div>
-            </div>
-
+    
             </section>
-
+    
         </div>
-
+    
     </main>
+    
 
     <footer class="bg-darkGreyFont bg-[url('/media/textures/grain-texture2.png')] bg-repeat bg-contain bg-[length:100px] pt-20 pb-20 px-5 h-auto w-full text-lightFont static bottom-0">
         <div class="flex flex-row justify-between ml-[10%] mr-[10%] w-[80%] relative">
