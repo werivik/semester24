@@ -838,6 +838,9 @@ video {
 .items-center {
   align-items: center;
 }
+.justify-end {
+  justify-content: flex-end;
+}
 .justify-center {
   justify-content: center;
 }
@@ -1087,6 +1090,12 @@ video {
 }
 .pl-\[20px\] {
   padding-left: 20px;
+}
+.pl-\[5px\] {
+  padding-left: 5px;
+}
+.pr-\[5px\] {
+  padding-right: 5px;
 }
 .pt-0 {
   padding-top: 0px;
