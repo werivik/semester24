@@ -62,7 +62,7 @@ export async function loadNewestListings() {
         itemsToShow = 1;
       }
 
-      else if (screenWidth <= 1100) {
+      else if (screenWidth <= 1300) {
         itemsToShow = 2;
       }
 

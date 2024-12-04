@@ -1,9 +1,8 @@
-<<<<<<< Updated upstream
 .responsive-menu {
   position: relative;
   display: none;
 
-  left: 5%;
+  left: 10%;
   transform: translate(-5%);
 
   input {
@@ -90,5 +89,3 @@
     display: none;
   }
 }
-=======
->>>>>>> Stashed changes

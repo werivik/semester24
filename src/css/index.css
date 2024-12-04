@@ -428,6 +428,24 @@
     }
 }
 
+@media (max-width: 1300px) {
+    .listing {
+        width: calc(40% - 10px);
+    }
+}
+
+@media (max-width: 990px) {
+    .listing {
+        width: calc(50% - 10px);
+    }
+}
+
+@media (max-width: 700px) {
+    .listing {
+        width: 100%;
+    }
+}
+
 
 /*Middle section responsive*/
 
