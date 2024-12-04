@@ -181,15 +181,15 @@
         
                 </section>
         
-                <section class="update-user-info" id="update-user-info">
+                <section class="update-user-info h-[100%] w-[100%]" id="update-user-info">
         
-                    <h2>Edit Profile</h2>
+                    <h2 class="mb-[80px] text-[35px]">Edit Profile</h2>
         
-                    <div class="user-update-content">
+                    <div class="user-update-content flex flex-col gap-[80px] bg-[#29272F] bg-[url('/media/textures/grain-texture2.png')] bg-repeat bg-contain bg-[100px] p-[20px] rounded-[25px] text-[#F2F2F2]">
         
-                        <form name="updateProfile" class="update-profile">
+                        <form name="updateProfile" class="update-profile flex flex-row gap-[40px] mt-[80px]">
         
-                            <div class="update-left">
+                            <div class="update-left flex flex-col gap-[40px] w-[50%]">
         
                                 <div class="update-avatar">
                                     <label for="newAvatar">Avatar Link:</label>
@@ -203,10 +203,10 @@
         
                             </div>
                             
-                            <div class="update-right">
-                                <div class="update-bio">
-                                    <label for="newBio">Bio:</label>
-                                    <textarea id="newBio" class="bio-text" placeholder="Write the new Bio here... Max 160 characters"></textarea>
+                            <div class="update-right w-[50%]">
+                                <div class="update-bio w-full flex flex-col gap-[20px]">
+                                    <label for="newBio" class="text-[20px]">Bio:</label>
+                                    <textarea id="newBio" class="bio-text w-full h-full min-h-[150px] text-[#F2F2F2] rounded-[15px] border-[1.5px] border-[#29272F]" placeholder="Write the new Bio here... Max 160 characters"></textarea>
                                 </div>
                             </div>
         
