@@ -1,3 +1,90 @@
+.all-users-listings {
+    .listings {
+        .listing {
+            width: calc(45% - 20px);
+            height: 550px;
+            padding: 10px;
+            background-color: #29272F;
+            border-radius: 25px;
+            color: #F2F2F2;
+            text-decoration: none;
+            position: relative;
+
+            .listing-image {
+                border-radius: 25px;
+                height: 275px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 25px;
+                    object-fit: cover;
+                }
+            }
+
+            .listing-content {
+
+                .title {
+
+                }
+                .description {
+                    height: 60px;
+                    overflow: hidden;
+                }
+                .lower-content {
+                    margin-top: 20px;
+                    font-size: 14px;
+                    .tags{
+                        opacity: 65%;
+                    }
+                    .bidding-end{}
+                    .total-bids{}
+                }
+            }
+
+            .edit-buttons {
+                position: absolute;
+                height: 98%;
+                width: 94.5%;
+                top: 0;
+                display: flex;
+                flex-direction: row;
+                align-items: end;
+                justify-content: space-around;
+                .edit-listing-button {
+                    background-color: #81AB76;
+                    border: none;
+                    border-radius: 10px;
+                    height: 30px;
+                    width: 75px;
+                    font-size: 14px;
+                    font-family: "Libre Bodoni", serif;
+                    &:hover {
+                        cursor: pointer;
+                        color: #F2F2F2;
+                        transition: 0.2s;
+                    }
+                }
+                .delete-listing-button {
+                    background-color: #D6650F;
+                    border: none;
+                    border-radius: 10px;
+                    height: 30px;
+                    width:75px;
+                    font-size: 14px;
+                    font-family: "Libre Bodoni", serif;
+                    &:hover {
+                        cursor: pointer;
+                        color: #F2F2F2;
+                        transition: 0.2s;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*
 .margin-section {
     display: flex;
     flex-direction: row;
@@ -187,100 +274,6 @@ h1 {}
     }
 }
 
-.all-users-listings {
-    margin-top: 40px;
-    
-    .listings {
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        width: 100%;
-
-        .listing {
-            width: calc(45% - 20px);
-            height: 550px;
-            padding: 10px;
-            background-color: #29272F;
-            border-radius: 25px;
-            color: #F2F2F2;
-            text-decoration: none;
-            position: relative;
-
-            .listing-image {
-                border-radius: 25px;
-                height: 275px;
-
-                img {
-                    width: 100%;
-                    height: 100%;
-                    border-radius: 25px;
-                    object-fit: cover;
-                }
-            }
-
-            .listing-content {
-
-                .title {
-
-                }
-                .description {
-                    height: 60px;
-                    overflow: hidden;
-                }
-                .lower-content {
-                    margin-top: 20px;
-                    font-size: 14px;
-                    .tags{
-                        opacity: 65%;
-                    }
-                    .bidding-end{}
-                    .total-bids{}
-                }
-            }
-
-            .edit-buttons {
-                position: absolute;
-                height: 98%;
-                width: 94.5%;
-                top: 0;
-                display: flex;
-                flex-direction: row;
-                align-items: end;
-                justify-content: space-around;
-                .edit-listing-button {
-                    background-color: #81AB76;
-                    border: none;
-                    border-radius: 10px;
-                    height: 30px;
-                    width: 75px;
-                    font-size: 14px;
-                    font-family: "Libre Bodoni", serif;
-                    &:hover {
-                        cursor: pointer;
-                        color: #F2F2F2;
-                        transition: 0.2s;
-                    }
-                }
-                .delete-listing-button {
-                    background-color: #D6650F;
-                    border: none;
-                    border-radius: 10px;
-                    height: 30px;
-                    width:75px;
-                    font-size: 14px;
-                    font-family: "Libre Bodoni", serif;
-                    &:hover {
-                        cursor: pointer;
-                        color: #F2F2F2;
-                        transition: 0.2s;
-                    }
-                }
-            }
-        }
-    }
-}
 
 .update-user-info {
     height: 100%;
