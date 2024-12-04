@@ -759,6 +759,9 @@ video {
 .w-\[150px\] {
   width: 150px;
 }
+.w-\[160px\] {
+  width: 160px;
+}
 .w-\[300px\] {
   width: 300px;
 }
@@ -945,6 +948,10 @@ video {
 .bg-\[\#29272F\] {
   --tw-bg-opacity: 1;
   background-color: rgb(41 39 47 / var(--tw-bg-opacity, 1));
+}
+.bg-\[\#81AB76\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(129 171 118 / var(--tw-bg-opacity, 1));
 }
 .bg-\[\#D6650F\] {
   --tw-bg-opacity: 1;
