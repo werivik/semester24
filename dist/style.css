@@ -1388,4 +1388,18 @@ h3 {
     font-size: 1.25rem;
     line-height: 1.75rem;
   }
+
+  .lg\:hover\:ml-\[15\%\]:hover {
+    margin-left: 15%;
+  }
+
+  .lg\:hover\:bg-\[\#81AB76\]:hover {
+    --tw-bg-opacity: 1;
+    background-color: rgb(129 171 118 / var(--tw-bg-opacity, 1));
+  }
+
+  .lg\:hover\:text-\[\#F2F2F2\]:hover {
+    --tw-text-opacity: 1;
+    color: rgb(242 242 242 / var(--tw-text-opacity, 1));
+  }
 }
