@@ -1,3 +1,19 @@
+.login-options {
+  display: none;
+}
+
+.user-profile {
+  display: none;
+}
+
+.login-options2 {
+  display: none;
+}
+
+.user-profile2 {
+  display: none;
+}
+
 .responsive-menu {
   position: relative;
   display: none;
