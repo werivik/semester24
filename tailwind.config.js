@@ -2,10 +2,12 @@
 module.exports = {
   content: [
     // HTML files in various folders
-    './index.html',
-    './listings/**/*.html',
-    './profile/**/*.html',
-    './auth/**/*.html',
+    './*.html',
+    './auth/*.html',
+    './listings/*.html',
+    './profile/*.html',
+
+    //Media files in that one folder
     './media/**/*.{html,js}',
 
     // JS files in various folders

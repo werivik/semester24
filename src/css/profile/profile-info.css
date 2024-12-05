@@ -23,7 +23,7 @@
             }
 
             .listing-content {
-
+                margin-top: 5px;
                 .title {
 
                 }
@@ -51,14 +51,18 @@
                 flex-direction: row;
                 align-items: end;
                 justify-content: space-around;
+
                 .edit-listing-button {
                     background-color: #81AB76;
                     border: none;
                     border-radius: 10px;
-                    height: 30px;
+                    height: 35px;
                     width: 75px;
                     font-size: 14px;
                     font-family: "Libre Bodoni", serif;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
                     &:hover {
                         cursor: pointer;
                         color: #F2F2F2;
@@ -69,10 +73,13 @@
                     background-color: #D6650F;
                     border: none;
                     border-radius: 10px;
-                    height: 30px;
+                    height: 35px;
                     width:75px;
                     font-size: 14px;
                     font-family: "Libre Bodoni", serif;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
                     &:hover {
                         cursor: pointer;
                         color: #F2F2F2;
@@ -80,8 +87,38 @@
                     }
                 }
             }
+
+            &:hover {
+                background-color: #D6650F;
+                transition: 0.2s;
+                .edit-buttons {
+                    .delete-listing-button {
+                        background-color: #29272F;
+                    }
+                }
+            }
         }
     }
+}
+
+@media (max-width: 1200px) {
+    .all-users-listings {
+        .listings {
+            .listing {
+                width: calc(50% - 10px);
+            }
+        }
+    }  
+}
+
+@media (max-width: 1000px) {
+    .all-users-listings {
+        .listings {
+            .listing {
+                width: 100%;
+            }
+        }
+    }  
 }
 
 /*

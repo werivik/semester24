@@ -136,7 +136,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 showPopup((confirmed) => {
                     if (confirmed) {
                         deleteListing(listingId);
-                    } else {
+                    } 
+                    
+                    else {
                         console.log('Deletion canceled');
                     }
                 });

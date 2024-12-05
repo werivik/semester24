@@ -9,10 +9,11 @@
     <link rel="stylesheet" href="/css/footer.css">
     <link rel="stylesheet" href="/css/body.css">
     <link rel="stylesheet" href="/css/profile/profile-info.css">
-    <link rel="stylesheet" href="/css/popup.css">
+    <link rel="stylesheet" href="/src/css/popup.css">
     -->
 
-    <link rel="stylesheet" href="/src/css/head/nav.css">  
+    <link rel="stylesheet" href="/src/css/head/nav.css">
+    <link rel="stylesheet" href="/src/css/popup.css">  
     <link rel="stylesheet" href="/src/css/profile/profile-info.css">  
     <link rel="stylesheet" href="/dist/style.css">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.0/dist/tailwind.min.css" rel="stylesheet">
@@ -170,11 +171,11 @@
         
                     <div class="user-listings-title flex flex-row justify-between items-center h-[80px]">
                         <h2 class="text-[35px] flex items-center justify-center">My Listings</h2>
-                        <button id="makeListing" onclick="window.location.href='create-listing.html'" class="create-button h-[40px] w-[160px] bg-[#81AB76] rounded-[10px] border-0 text-[#F2F2F2] text-[18px]"><i class="fa-solid fa-plus"></i>Create Listing</button>
+                        <button id="makeListing" onclick="window.location.href='create-listing.html'" class="create-button h-[40px] w-[160px] bg-[#81AB76] rounded-[10px] border-0 text-[#F2F2F2] text-[18px] hover:cursor-pointer hover:bg-specialOrange transition-all duration-200">Create Listing</button>
                     </div>
                     
                     <div class="all-users-listings mt-[40px]">
-                        <div id="user-listings" class="listings flex flex-wrap items-start justify-between w-full">
+                        <div id="user-listings" class="listings flex flex-wrap items-start justify-between w-full gap-[10px]">
                             <p></p>
                         </div>
                     </div>
@@ -187,9 +188,9 @@
         
                     <div class="user-update-content flex flex-col gap-[80px] bg-[#29272F] bg-[url('/media/textures/grain-texture2.png')] bg-repeat bg-contain bg-[100px] p-[20px] rounded-[25px] text-[#F2F2F2]">
         
-                        <form name="updateProfile" class="update-profile flex flex-row gap-[40px] mt-[80px]">
+                        <form name="updateProfile" class="update-profile flex flex-row gap-[40px] mt-[80px] sm:flex-col">
         
-                            <div class="update-left flex flex-col gap-[40px] w-[50%]">
+                            <div class="update-left flex flex-col gap-[40px] w-[100%]">
         
                                 <div class="update-avatar flex flex-col gap-5">
                                     <label for="newAvatar" class="text-[20px]">Avatar Link:</label>
@@ -203,7 +204,7 @@
         
                             </div>
                             
-                            <div class="update-right w-[50%]">
+                            <div class="update-right w-[100%]">
                                 <div class="update-bio w-full flex flex-col gap-[20px]">
                                     <label for="newBio" class="text-[20px]">Bio:</label>
                                     <textarea id="newBio" class="bio-text w-full h-full min-h-[150px] text-[#F2F2F2] rounded-[15px] border-[1.5px] border-[#29272F]" placeholder="Write the new Bio here... Max 160 characters"></textarea>
@@ -212,7 +213,7 @@
         
                         </form>
         
-                        <div class="save-button-content w-full flex justify-end">
+                        <div class="save-button-content w-full flex justify-end mb-[10px]">
                             <button id="saveChanges" class="save-button bg-[#81AB76] h-[35px] rounded-[10px] border-0 text-[#F2F2F2] text-[16px] font-serif pl-[5px] pr-[5px] hover:bg-[#D6650F] hover:cursor-pointer transition-all duration-200">Save Changes</button>
                         </div>
                     </div>
