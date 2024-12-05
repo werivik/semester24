@@ -69,23 +69,6 @@
                         transition: 0.2s;
                     }
                 }
-                .delete-listing-button {
-                    background-color: #D6650F;
-                    border: none;
-                    border-radius: 10px;
-                    height: 35px;
-                    width:75px;
-                    font-size: 14px;
-                    font-family: "Libre Bodoni", serif;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    &:hover {
-                        cursor: pointer;
-                        color: #F2F2F2;
-                        transition: 0.2s;
-                    }
-                }
             }
 
             &:hover {

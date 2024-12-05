@@ -86,7 +86,7 @@ const updatePreview = () => {
         previewImage.src = mediaUrl;
         previewImage.alt = "Preview image";
     } 
-    
+
     else {
         previewImage.src = "";
     }
@@ -105,9 +105,9 @@ const deleteListing = async (listingId) => {
         if (!response.ok) throw new Error('Failed to delete the listing');
         
         alert('Listing deleted successfully.');
-        window.location.href = '/dashboard.html';
+        window.location.href = '/profile/profile.html';
     } 
-    
+
     catch (error) {
         console.error('Error deleting the listing:', error);
         alert('Failed to delete listing. Please try again.');
@@ -134,14 +134,16 @@ document.addEventListener("DOMContentLoaded", () => {
     if (listingId) {
         fetchListingDetails(listingId);
 
-        const deleteButton = document.getElementById("deleteButton");
+        const deleteButton = document.querySelector(".delete-button");
         if (deleteButton) {
-            deleteButton.addEventListener("click", () => {
+            deleteButton.addEventListener("click", (event) => {
+                event.preventDefault();
+
                 showPopup((confirmed) => {
                     if (confirmed) {
                         deleteListing(listingId);
                     } 
-                    
+
                     else {
                         console.log("Deletion canceled");
                     }
@@ -149,7 +151,7 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         }
     } 
-    
+
     else {
         updateStatus.textContent = "No listing ID provided in the URL.";
         updateStatus.style.color = "red";
@@ -207,9 +209,11 @@ const updateListing = async (listingId, title, description, mediaUrl, tags, ends
         updateStatus.textContent = `Listing "${responseData.data.title}" updated successfully!`;
         updateStatus.style.color = "green";
     } 
-    
+
     catch (error) {
         updateStatus.textContent = `Error: ${error.message}`;
         updateStatus.style.color = "red";
     }
 };
+
+

@@ -1,4 +1,4 @@
-import { API_PROFILES_SINGLE, API_PROFILES_LISTINGS, API_DELETE_LISTING } from "../constants.js";
+import { API_PROFILES_SINGLE, API_PROFILES_LISTINGS } from "../constants.js";
 import { headers } from "../headers.js";
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -8,10 +8,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const avatarImg = document.getElementById("avatar");
     const listingsContainer = document.getElementById('user-listings');
     const logoutButton = document.getElementById('logoutButton');
-
-    const popup = document.getElementById('confirm-delete-popup');
-    const confirmYes = document.getElementById('confirm-delete-yes');
-    const confirmNo = document.getElementById('confirm-delete-no');
 
     const fetchUserData = async () => {
         try {
@@ -30,7 +26,6 @@ document.addEventListener("DOMContentLoaded", () => {
             if (!response.ok) throw new Error('Failed to fetch user information');
             return await response.json();
         } 
-        
         catch (error) {
             console.error('Error fetching user information:', error);
             return null;
@@ -49,46 +44,9 @@ document.addEventListener("DOMContentLoaded", () => {
             const data = await response.json();
             return data?.data || [];
         } 
-        
         catch (error) {
             console.error('Error fetching user listings:', error);
             return [];
-        }
-    };
-
-    const showPopup = (callback) => {
-        popup.classList.remove('hidden');
-
-        confirmYes.onclick = () => {
-            popup.classList.add('hidden');
-            callback(true);
-        };
-
-        confirmNo.onclick = () => {
-            popup.classList.add('hidden');
-            callback(false);
-        };
-    };
-
-    const deleteListing = async (listingId) => {
-        try {
-            const token = localStorage.getItem('accessToken') || sessionStorage.getItem('accessToken');
-            const deleteEndpoint = API_DELETE_LISTING.replace('<id>', listingId);
-
-            const response = await fetch(deleteEndpoint, {
-                method: 'DELETE',
-                headers: headers(token),
-            });
-
-            if (!response.ok) throw new Error('Failed to delete the listing');
-            
-            alert('Listing deleted successfully.');
-            updateUserInfo();
-        } 
-        
-        catch (error) {
-            console.error('Error deleting the listing:', error);
-            alert('Failed to delete listing. Please try again.');
         }
     };
 
@@ -121,29 +79,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 <div class="edit-buttons">
                     <button data-id="${listing.id}" class="edit-listing-button" id="editButton">EDIT</button>
-                    <button data-id="${listing.id}" data-title="${listing.title}" class="delete-listing-button" id="deleteButton">DELETE</button>
                 </div>
             </a>
             `;
         }).join('');
 
         listingsContainer.innerHTML = listingsHtml;
-
-        document.querySelectorAll('.delete-listing-button').forEach((button) => {
-            button.addEventListener('click', (event) => {
-                event.stopPropagation();
-                const listingId = button.getAttribute('data-id');
-                showPopup((confirmed) => {
-                    if (confirmed) {
-                        deleteListing(listingId);
-                    } 
-                    
-                    else {
-                        console.log('Deletion canceled');
-                    }
-                });
-            });
-        });
 
         document.querySelectorAll(".edit-listing-button").forEach((button) => {
             button.addEventListener("click", (event) => {
@@ -172,7 +113,6 @@ document.addEventListener("DOMContentLoaded", () => {
                     avatarImg.alt = avatar.alt || 'User avatar';
                     avatarImg.style.display = 'block';
                 } 
-                
                 else {
                     avatarImg.style.display = 'none';
                 }
@@ -182,7 +122,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 if (creditDiv) {
                     creditDiv.textContent = `${credits || 0} ${credits === 1 ? 'Credit' : 'Credits'}`;
                 } 
-                
                 else {
                     console.warn('Credit div not found in the DOM');
                 }
@@ -193,12 +132,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 displayListings(listings);
             } 
-            
             else {
                 console.error('No user data returned from the API');
             }
         } 
-        
         catch (error) {
             console.error('Error updating user info:', error);
         }
@@ -225,10 +162,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 await updateUserInfo(); 
             }
         } 
-        
         catch (error) {
             console.error('Error in fetching or updating user data:', error);
         }
     })();
-
 });
+
