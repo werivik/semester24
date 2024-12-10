@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 .listing {
 
     color: #F2F2F2;
@@ -138,6 +137,17 @@
     }
 }
 
+.see-more-border {
+    &:hover {
+        background-color: #29272F;
+        color: #F2F2F2;
+        cursor: pointer;
+        .see-more-title {
+            color: #F2F2F2;
+        }
+    }
+}
+
 @media (max-width: 1300px) {
     .listing {
         width: calc(40% - 10px);
@@ -156,7 +166,7 @@
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
     .top-section-border {
         padding: 0px;
     }
@@ -164,13 +174,24 @@
         display: none;
     }
     .top-section-content-right {
-        margin-top: 0px;
-        top: 0;
-        height: 100%;
-        padding: 0px;
-        margin: 0;
-        min-width: 100%;
+        position: absolute;
     }
-
 }
 
+@media (max-width: 640px) {
+    .listing {
+        min-width: 350px;
+    }
+}
+
+@media (max-width: 600px) {
+    .listing {
+        min-width: 250px;
+    }
+}
+
+@media (max-width: 400px) {
+    .listing {
+        min-width: 200px;
+    }
+}
