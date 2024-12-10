@@ -109,7 +109,7 @@
 </header>
 
     <main class="min-h-screen mb-auto">
-        <div class="ml-[10%] mr-[10%] pt-[160px] lPaddingUp">
+        <div class="main-banner ml-[10%] mr-[10%] pt-[160px]">
             <section class="h-[680px] w-full flex items-center justify-center lg:h-[680px] sm:h-auto p-4">
 
                 <div class="top-section-border bg-[#29272F] bg-[url('/media/textures/grain-texture2.png')] bg-repeat bg-contain bg-[length:100px] rounded-[25px] h-full w-full flex flex-col lg:flex-row items-center justify-center p-[40px] relative">
@@ -118,9 +118,9 @@
                     <img src="/media/auction.jpeg" alt="Auction Logo, a gavel about to hit a moneybag in a modern icon design, with the Company's name underneath" class="w-full h-full object-cover rounded-[25px] blur-[10px]" />
                   </div>
                   
-                  <div class="top-border-content w-full h-full relative flex flex-col lg:flex-row justify-between lg:w-[100%]">
-                    <div class="top-section-content-left z-20 h-full flex pl-[20px] lg:pl-[40px] items-center w-full lg:w-[55%] mt-5 lg:mt-0">  
-                      <div class="content-left w-[100%] text-center lg:text-left">
+                  <div class="top-border-content w-full h-full relative flex flex-col lg:flex-row justify-between items-center lg:w-[100%]">
+                    <div class="top-section-content-left z-20 h-full pl-[20px] lg:pl-[40px] flex flex-col items-center justify-center w-full lg:w-[55%] mt-5 lg:mt-0">  
+                      <div class="content-left w-[100%] h-full text-center lg:text-left">
                         <div class="left-titles lightFont">
                           <h2 class="text-[30px] sm:text-[50px] lg:text-[65px] text-lightFont">Bidding</h2>
                           <h2 class="text-[30px] sm:text-[50px] lg:text-[65px] text-specialOrange">Safely <span class="text-lightFont">&</span></h2>
@@ -128,33 +128,32 @@
                         </div>
                       </div>
                     </div>
-                  </div>
-              
-                  <div class="top-section-content-right z-20 p-5 lg:p-10 w-full lg:w-[60%] mt-5 lg:mt-0">
-                    <div class="content-right z-30 bg-[#F2F2F2] bg-[url('/media/textures/grain-texture-light.png')] bg-repeat bg-contain bg-[length:100px] p-5 rounded-tl-[25px] rounded-tr-[25px] rounded-br-[25px] rounded-bl-[0px] w-[100%] h-auto lg:h-[439px] relative">
-                      <div class="top-section-content-right z-20 p-5 lg:p-10 flex flex-col items-center justify-center text-center">
-                        <h3 class="text-lg lg:text-xl font-bold text-font3">Create an Account Today!</h3>
-                        <h4 class="text-md lg:text-lg text-font4">All New Accounts get 1000 Credits</h4>
+                    <div class="top-section-content-right block z-20 p-5 lg:p-10 w-full lg:w-[60%] mt-5 lg:mt-0">
+                      <div class="top-content-right block z-30 bg-[#F2F2F2] bg-[url('/media/textures/grain-texture-light.png')] bg-repeat bg-contain bg-[length:100px] p-5 rounded-tl-[25px] rounded-tr-[25px] rounded-br-[25px] rounded-bl-[0px] w-full h-auto lg:h-[439px] relative">
+                        <div class="content-right z-20 p-5 lg:p-10 flex flex-col items-center justify-center text-center">
+                          <h3 class="text-lg lg:text-xl font-bold text-font3">Create an Account Today!</h3>
+                          <h4 class="text-md lg:text-lg text-font4">All New Accounts get 1000 Credits</h4>
+                        </div>
+                
+                        <form id="registerForm" class="w-full flex flex-col items-center justify-center gap-4">
+                          <div class="w-[90%] lg:w-[300px] h-[38px] rounded-full">
+                            <input type="text" id="name" name="name" required placeholder="Username" class="w-full h-full rounded-full border-2 border-[#29272F] bg-white pl-2 focus:outline-none focus:border-[#29272F]" />
+                          </div>
+                          
+                          <div class="w-[90%] lg:w-[300px] h-[38px] rounded-full">
+                            <input type="email" id="email" name="email" required placeholder="Email" class="w-full h-full rounded-full border-2 border-[#29272F] bg-white pl-2 focus:outline-none focus:border-[#29272F]" />
+                          </div>
+                          
+                          <div class="w-[90%] lg:w-[300px] h-[38px] rounded-full">
+                            <input type="password" id="password" name="password" required placeholder="Password" class="w-full h-full rounded-full border-2 border-[#29272F] bg-white pl-2 focus:outline-none focus:border-[#29272F]" />
+                          </div>
+                        </form>
                       </div>
-              
-                      <form id="registerForm" class="w-full flex flex-col items-center justify-center gap-4">
-                        <div class="w-[90%] lg:w-[300px] h-[38px] rounded-full">
-                          <input type="text" id="name" name="name" required placeholder="Username" class="w-full h-full rounded-full border-2 border-[#29272F] bg-white pl-2 focus:outline-none focus:border-[#29272F]" />
-                        </div>
-                        
-                        <div class="w-[90%] lg:w-[300px] h-[38px] rounded-full">
-                          <input type="email" id="email" name="email" required placeholder="Email" class="w-full h-full rounded-full border-2 border-[#29272F] bg-white pl-2 focus:outline-none focus:border-[#29272F]" />
-                        </div>
-                        
-                        <div class="w-[90%] lg:w-[300px] h-[38px] rounded-full">
-                          <input type="password" id="password" name="password" required placeholder="Password" class="w-full h-full rounded-full border-2 border-[#29272F] bg-white pl-2 focus:outline-none focus:border-[#29272F]" />
-                        </div>
-                      </form>
+                
+                      <button type="submit" class="bg-[#D6650F] mt-4 w-[100%] lg:w-[45%] h-[50px] lg:h-[74px] border-0 rounded-[0px_25px_25px_25px] text-md lg:text-[18px] font-semibold text-[#29272F] hover:transition-all hover:duration-200 hover:ml-[15%] hover:bg-[#81AB76] hover:text-[#F2F2F2] cursor-pointer mx-auto lg:hover:ml-[15%] lg:hover:bg-[#81AB76] lg:hover:text-[#F2F2F2]">
+                        REGISTER
+                      </button>
                     </div>
-              
-                    <button type="submit" class="bg-[#D6650F] mt-4 w-[100%] lg:w-[45%] h-[50px] lg:h-[74px] border-0 rounded-[0px_25px_25px_25px] text-md lg:text-[18px] font-semibold text-[#29272F] hover:transition-all hover:duration-200 hover:ml-[15%] hover:bg-[#81AB76] hover:text-[#F2F2F2] cursor-pointer mx-auto lg:hover:ml-[15%] lg:hover:bg-[#81AB76] lg:hover:text-[#F2F2F2]">
-                      REGISTER
-                    </button>
                   </div>
                 </div>
               
