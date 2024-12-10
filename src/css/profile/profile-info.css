@@ -84,6 +84,10 @@
     }
 }
 
+.right-side-sections {
+    margin-left: 80px;
+}
+
 @media (max-width: 1200px) {
     .all-users-listings {
         .listings {
@@ -102,6 +106,13 @@
             }
         }
     }  
+}
+
+@media (max-width: 1003px) {
+    .right-side-sections {
+        margin-left: 0px;
+        margin-top: 80px;
+    }
 }
 
 /*

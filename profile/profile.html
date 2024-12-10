@@ -110,13 +110,9 @@
 
     <main class="min-h-screen mb-auto">
 
-        <div class="font-serif ml-[10%] mr-[10%] pt-[160px] lPaddingUp flex flex-row justify-between">
+        <div class="font-serif ml-[10%] mr-[10%] pt-[160px] lPaddingUp flex lg:flex-row lg:justify-between sm:flex-col sm:justify-evenly">
 
-            <section class="profile-info-section sticky bg-[#29272F] bg-[url('/media/textures/grain-texture2.png')] bg-repeat bg-contain bg-[100px] h-[75vh] w-[300px] rounded-[15px] text-[#F2F2F2]">
-                <h1>
-                    <div id="username"></div>
-                </h1>
-    
+            <section class="profile-info-section sticky bg-[#29272F] bg-[url('/media/textures/grain-texture2.png')] bg-repeat bg-contain bg-[100px] h-[75vh] pb-10 lg:w-[300px] sm:mb-[40px] rounded-[15px] text-[#F2F2F2]">    
                 <div class="profile-info-content p-[10px]">
                     <div class="profile-content">
     
@@ -127,8 +123,9 @@
                             <div id="avatar-container" class="avatar-container w-[150px] h-[150px] rounded-full border-[1.5px] border-[#F2F2F2]">
                                 <img id="avatar" src="/media/default-profile.jpg" alt="Avatar" class="w-full h-full object-cover rounded-full"/>
                             </div>
-    
+
                             <div class="name-email-bio flex flex-col gap-5 w-full items-center">
+
                                 <div id="name" class="user-name text-center text-[20px] mt-[20px]">Username</div>
         
                                 <div id="email" class="user-email text-center text-[16px] opacity-[0.65] mt-[-20px]">Email</div>
@@ -153,7 +150,7 @@
     
             </section>
     
-            <div class="right-side-sections overflow-hidden h-full w-full ml-[80px] flex flex-col gap-[160px] pb-[160px]">
+            <div class="right-side-sections overflow-hidden h-full w-full flex flex-col gap-[160px] pb-[160px]">
         
                 <section class="users-listings-section w-[100%]" id="users-listings-section">
         
