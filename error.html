@@ -4,7 +4,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
 
-    <link rel="stylesheet" href="/src/css/error.css">
+    <link rel="stylesheet" href="/src/css/head/nav.css">
+
+    <link rel="stylesheet" href="/dist/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.0/dist/tailwind.min.css" rel="stylesheet">
 
     <script type="module" src="/js/auth/register.js" defer></script>
     <script type="module" src="/js/nav/account.js" defer></script>
@@ -20,7 +23,7 @@
 <script src="https://kit.fontawesome.com/2ef99fbf3a.js" crossorigin="anonymous">
 </script>
 
-<body>
+<body class="bg-bodyBackground p-0 m-0 h-full overflow-x-hidden font-serif">
 
     <header class="bg-bodyBackground h-[80px] w-full fixed top-0 z-[999] border-b-[1.5px] border-darkGreyFont">
         <nav class="ml-[10%] mr-[10%] h-[80px]">
@@ -99,7 +102,7 @@
         </nav>
     </header>
 
-    <main>
+    <main class="min-h-screen mb-auto flex justify-center items-center">
         <div class="margin-section">
 
             <section class="error-section">
