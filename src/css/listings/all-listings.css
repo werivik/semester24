@@ -217,6 +217,10 @@
             height: 55px;
         }
     }
+
+    .tag-section {
+        display: none;
+    }
 }
 
 
