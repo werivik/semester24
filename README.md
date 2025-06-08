@@ -82,7 +82,7 @@ Please ensure your code follows the existing style and structure.
 
 ## Contact
 
-[LinkedIn](www.linkedin.com)
+[LinkedIn](https://www.linkedin.com/in/weronika-vik-0844022a6/)
 [GitHub](https://github.com/werivik)
 
 ## License
